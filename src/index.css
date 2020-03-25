@@ -28,6 +28,7 @@ img {
 	max-width: 1230px;
 	padding-right: 15px;
 	padding-left: 15px;
+	/* width が決まっている場合、mergin-right, margin-left を auto にすると margin を等割して中央揃えにしてくれる */
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -46,6 +47,19 @@ img {
 	margin-left: auto;
 }
 
+.ly_cont {
+	max-width: 1230px;
+	padding: 60px 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/* === === === ヘルパーグループ === === === */
+
 .hp_btGray {
 	border-top: 1px solid #777 !important;
+}
+
+.hp_bgcBase {
+	background-color: #efefef !important;
 }
