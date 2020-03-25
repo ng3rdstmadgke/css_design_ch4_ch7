@@ -1,1 +1,17 @@
 @import 'css-wipe';
+
+/* === === === ベーススタイル === === === */
+body {
+	color: #222;
+	font-family: sans-serif;
+	line-height: 1.5;
+}
+
+a {
+	color: #0069ff;
+}
+
+img {
+	max-width: 100px;
+	vertical-align: top;
+}
