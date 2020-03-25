@@ -24,10 +24,28 @@ img {
 }
 
 .ly_header_inner {
-	/* css-wipe で box-sizing: border-box;が適用されているので、widthとpaddingの合計で幅は1200px */
-	max-width: 1170px;
+	/* css-wipe で box-sizing: border-box;が適用されているので、paddingを引いたwidthは1200px */
+	max-width: 1230px;
 	padding-right: 15px;
 	padding-left: 15px;
 	margin-right: auto;
 	margin-left: auto;
+}
+
+.ly_footer {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #222;
+}
+
+.ly_footer_inner {
+	max-width: 1230px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.hp_btGray {
+	border-top: 1px solid #777 !important;
 }
