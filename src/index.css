@@ -1,6 +1,6 @@
 @import 'css-wipe';
 
-/* === === === ベーススタイル === === === */
+/* === === === ベースグループ === === === */
 body {
 	color: #222;
 	font-family: sans-serif;
@@ -14,4 +14,20 @@ a {
 img {
 	max-width: 100px;
 	vertical-align: top;
+}
+
+/* === === === レイアウトグループ === === === */
+
+.ly_header {
+	padding-top: 20px;
+	border-bottom: 1px solid #ddd;
+}
+
+.ly_header_inner {
+	/* css-wipe で box-sizing: border-box;が適用されているので、widthとpaddingの合計で幅は1200px */
+	max-width: 1170px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
 }

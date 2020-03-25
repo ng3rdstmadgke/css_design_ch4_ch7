@@ -63,6 +63,6 @@ module.exports = require('insert-css')
 
 },{"insert-css":1}],3:[function(require,module,exports){
 const css = 0;
-;((require('sheetify/insert')("@import 'css-wipe';\n\nh1 {\n\tcolor: red;\n}") || true) && "_af3a49ef");
+;((require('sheetify/insert')("@import 'css-wipe';\n\n/* === === === ベースグループ === === === */\nbody {\n\tcolor: #222;\n\tfont-family: sans-serif;\n\tline-height: 1.5;\n}\n\na {\n\tcolor: #0069ff;\n}\n\nimg {\n\tmax-width: 100px;\n\tvertical-align: top;\n}\n\n/* === === === レイアウトグループ === === === */\n\n.ly_header {\n\tpadding-top: 20px;\n\tborder-bottom: 1px solid #ddd;\n}\n\n.ly_header_inner {\n\t/* css-wipe で box-sizing: border-box;が適用されているので、widthとpaddingの合計で幅は1200px */\n\tmax-width: 1170px;\n\tpadding-right: 15px;\n\tpadding-left: 15px;\n\tmargin-right: auto;\n\tmargin-left: auto;\n}") || true) && "_2fa7f6f5");
 
 },{"sheetify/insert":2}]},{},[3]);
