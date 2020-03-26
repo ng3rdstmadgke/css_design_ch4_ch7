@@ -90,6 +90,50 @@ img {
 	}
 }
 
+/* === === === モジュールグループ === === === */
+.el_btn {
+	/* https://saruwakakun.com/html-css/basic/display#section4 */
+	display: inline-block; /* 要素の並びはinline的(横並び)で、要素の中身はblock的な性質を持つ。(親要素のtext-alignを継承してくれるため位置調整のcssが要らなくなる) */
+	width: 300px; /* 長いテキストが入る場合に改行されるように、横幅を指定する */
+	max-width: 100%; /* スクリーンサイズが小さくなったときにボタンが見切れないように、横幅を親ボックスの最大値に合わせる */
+	padding: 20px 10px; /* heightプロパティで指定すると長いテキストが来たときにボタンから溢れてしまう */
+	background-color: #e25c00;
+	/* border-width, border-style, border-color を一括設定する: https://developer.mozilla.org/ja/docs/Web/CSS/border */
+	border: 2px solid transparent; /* ホバーのときにボタンのサイズが変わらないように最初からボーダーを設定しておく。transparent = 透明 */
+	/* 要素のフレームの周囲にシャドウ効果を追加する: https://developer.mozilla.org/ja/docs/Web/CSS/box-shadow */
+	/* offset-x, offset-y, blur-radius, color */
+	box-shadow: 0 3px 6px rgba(0,0,0,.16); /* rgba(0,0,0,.16) は 16% の透明度の黒 */
+	color: #fff;
+	font-size: 1.125rem; /* ルート要素の font-size を基準にしたサイズ。root 要素の font-size は 16px なので 1.125rem は 18px。ブラウザのフォントサイズ設定が反映される。 */
+	text-align: center;
+	/* テキストの装飾的な線の表示を一括設定するプロパティ: https://developer.mozilla.org/ja/docs/Web/CSS/text-decoration
+	 * text-decoration-line: 使用する装飾の種類を指定(underlineやline-through)
+	 * text-decoration-color: 装飾の色
+	 * text-decoration-style: 装飾の種類(solid(実線), wavy(波線), dashed(取り消し線))
+	 * text-decoration-thickness: 装飾に使われる線の太さ
+	*/
+	text-decoration: none; /* テキストの装飾を行わない */
+	/**
+	 * :hoverなどの擬似クラスによる状態遷移の一括設定プロパティ: https://developer.mozilla.org/ja/docs/Web/CSS/transition
+	 * transition-property: トランジションを適用するcssプロパティの名前: https://developer.mozilla.org/ja/docs/Web/CSS/transition-property
+	 * transition-duration: トランジションにかかる所要時間(default=0s): https://developer.mozilla.org/ja/docs/Web/CSS/transition-duration
+	 * transition-timing-function: トランジション実行時の中間状態の遷移を指定する関数(default=ease): https://developer.mozilla.org/ja/docs/Web/CSS/transition-timing-function
+	 * transition-delay: トランジションが実行されるまでの待ち時間(defualt=0s): https://developer.mozilla.org/ja/docs/Web/CSS/transition-delay
+	 */
+	transition: all .25s; /* プロパティ名, 所要時間 */
+}
+
+/*
+ * forcus: tabで要素にフォーカスしたとき
+ * hover: カーソルを要素の上に置いたとき
+ */
+.el_btn:focus,
+.el_btn:hover {
+	background-color: #fff;
+	border-color: currentColor;
+	color: #e25c00;
+}
+
 
 /* === === === ヘルパーグループ === === === */
 
