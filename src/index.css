@@ -55,22 +55,34 @@ img {
 }
 
 .ly_cont.ly_cont__col {
+	/* 要素の表示種別を指定する: https://developer.mozilla.org/ja/docs/Web/CSS/display */
 	display: flex;
-	justify-content: space-between;
+	/* フレックスコンテナ内のアイテムの間隔や配置を定義する: https://developer.mozilla.org/ja/docs/Web/CSS/justify-content */
+	justify-content: space-between; /* 各アイテムを均等に配置し、 最初のアイテムは先頭に寄せ、 最後のアイテムは末尾に寄せる */
 }
 
 .ly_cont_main {
-	flex: 1;
+	/**
+	 * flex-grow, flex-shrink, flex-basisをまとめて指定する: https://developer.mozilla.org/ja/docs/Web/CSS/flex
+	 * flex-grow: 子要素の伸びる比率。指定する数字が大きくなるとその分だけ伸長するようになる。0は伸長しない
+	 * flex-shrink: 子要素の縮む比率。指定する数字が大きくなるとその分だけ縮むようになる。0は縮まない
+	 * flex-basis: フレックスアイテムの初期の寸法を設定する。
+	 */
+	flex: 1; /* 画面サイズに合わせて要素が伸長する */
 	margin-right: 3.25203%;
 }
 
 .ly_cont_side {
-	flex: 0 0 260px;
+	flex: 0 0 260px; /* 画面サイズによらず要素幅は 260px */
 }
 
 @media screen and (max-width: 768px) {
 	.ly_cont.ly_cont__col {
-		flex-direction: column;
+		/**
+		 * 子要素の並ぶ向きを指定する: https://developer.mozilla.org/ja/docs/Web/CSS/flex-direction
+		 * row: 左から右に並ぶ * row-reverse: 右から左に並ぶ * column: 上から下に並ぶ * column-reverse: 下から上に並ぶ
+		 */
+		flex-direction: column; /* 上から下に並ぶ */
 	}
 	.ly_cont_main {
 		margin-right: 0;
