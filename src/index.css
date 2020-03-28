@@ -123,7 +123,39 @@ img {
 	transition: all .25s; /* プロパティ名, 所要時間 */
 }
 
-/*
+.el_btn.el_btn__arrowRight {
+	/**
+	 * 要素の基準位置が相対か絶対かを指定する際に使用する。表示位置はtop, right, bottom, leftなどで指定する。: http://www.htmq.com/style/position.shtml
+	 * static: 初期値。top, right, bottom, left, z-index プロパティは効果がない
+	 * relative: 相対位置で要素の配置を指定する。
+	 *           staticを指定した場合に表示される位置が基準位置となる。
+	 *           top, right, bottom, left で相対位置を指定
+	 * absolute: 絶対位置で要素の配置を指定する。 要素のための空間が作成されない。
+	 *           親要素が position: static 以外なら、親要素の左上が基準位置として top, right, bottom, left で位置を指定
+	 *           親要素が position: static なら、ウィンドウ全体の左上が基準位置として top, right, bottom, left で位置を指定
+	 * fixed:  絶対位置で要素の配置を指定する。要素のための空間が作成されない。スクロールしても位置が固定されたままとなる。
+	 *         ビューポートの左上を基準位置として、top, right, bottom, left で位置を指定
+	 */
+	position: relative; /* after疑似要素で実装するアイコンにposition: absolute;を使用するため relativeを設定する */
+	padding-right: 2em; /* アイコンを設置する分、右側の余白を多めに設定する */
+	padding-left: 1.38em;
+}
+
+.el_btn.el_btn__arrowRight::after {
+	content: '\f061';
+	/* position: absolete, top: 50%, transform: translateY(-50%) は天地中央揃えの常套手段 */
+	position: absolute;
+	top: 50%;
+	/* 要素を回転、拡大縮小、傾斜、移動させることができる */
+	transform: translateY(-50%); /* 要素サイズの50%上に寄せる */
+	right: .83em;
+	font-family: 'Font Awesome 5 Free'; /* https://fontawesome.com/ で取得できる */
+	/* Font Awesome の Solid スタイルを表示させるための指定。Font Awsome 5 からスタイルを font-weight でしていできるようになった */
+	font-weight: 900;
+}
+
+/**
+ * 擬似クラス
  * forcus: tabで要素にフォーカスしたとき
  * hover: カーソルを要素の上に置いたとき
  */
