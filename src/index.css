@@ -24,6 +24,10 @@ img {
 }
 
 .ly_header_inner {
+	/*
+	 * box-sizing: content-box: 初期値。パディングとボーダーを幅と高さに含めない
+	 * box-sizing: border-box: パディングとボーダーを幅と高さに含める。
+	 */
 	/* css-wipe で box-sizing: border-box;が適用されているので、paddingを引いたwidthは1200px */
 	max-width: 1230px;
 	padding-right: 15px;
@@ -92,7 +96,13 @@ img {
 
 /* === === === モジュールグループ === === === */
 .el_btn {
-	/* https://saruwakakun.com/html-css/basic/display#section4 */
+	/**
+	 * ブロックレベル、インライン、テーブル、ルビ、フレックスコンテナなどの、要素の表示形式を指定する : http://www.htmq.com/style/display.shtml
+	 *                                                                              https://saruwakakun.com/html-css/basic/display#section4
+	 * inline: 初期値。インラインボックスを生成する。
+	 * block: ブロックボックスを生成する。
+	 * inline-block: インラインレベルのブロックコンテナを生成する。要素の並びはinline的(横並び)で、要素の中身はblock的な性質を持つ。
+	 */
 	display: inline-block; /* 要素の並びはinline的(横並び)で、要素の中身はblock的な性質を持つ。(親要素のtext-alignを継承してくれるため位置調整のcssが要らなくなる) */
 	width: 300px; /* 長いテキストが入る場合に改行されるように、横幅を指定する */
 	max-width: 100%; /* スクリーンサイズが小さくなったときにボタンが見切れないように、横幅を親ボックスの最大値に合わせる */
@@ -123,6 +133,13 @@ img {
 	transition: all .25s; /* プロパティ名, 所要時間 */
 }
 
+.el_btn.el_btn__large {
+	width: 340px;
+	padding-top: 25px; /* 高さを増すためには .el_btn のスタイルと同様に height ではなく padding を使用する */
+	padding-bottom: 25px;
+	font-size: 1.375rem;
+}
+
 .el_btn.el_btn__arrowRight {
 	/**
 	 * 要素の基準位置が相対か絶対かを指定する際に使用する。表示位置はtop, right, bottom, leftなどで指定する。: http://www.htmq.com/style/position.shtml
@@ -141,6 +158,10 @@ img {
 	padding-left: 1.38em;
 }
 
+/**
+ * 疑似要素: セレクタに負荷するキーワードで、選択された要素の特定の部分にスタイル付できるようにするもの: https://developer.mozilla.org/ja/docs/Web/CSS/Pseudo-elements
+ * ::after : 選択した要素の最後の子要素として疑似要素を作成する。contentプロパティで作成した要素に内容を挿入できる。
+ */
 .el_btn.el_btn__arrowRight::after {
 	content: '\f061';
 	/* position: absolete, top: 50%, transform: translateY(-50%) は天地中央揃えの常套手段 */
