@@ -105,6 +105,7 @@ img {
 
 /* === === === モジュールグループ === === === */
 
+/* --- --- --- ボタン --- --- --- */
 /**
  * ■ display : http://www.htmq.com/style/display.shtml , https://saruwakakun.com/html-css/basic/display#section4
  * ブロックレベル、インライン、テーブル、ルビ、フレックスコンテナなどの、要素の表示形式を指定する
@@ -242,6 +243,8 @@ img {
 	color: #e25c00;
 }
 
+/* --- --- --- アイコン付き小ボタン --- --- --- */
+
 .el_beforeIconBtn {
 	/* 使用されるコンテキストのフォントサイズに合わせたいため、フォントサイズは設定しない */
 	position: relative;
@@ -272,6 +275,59 @@ img {
 .el_beforeIconBtn.el_beforeIconBtn__zoom::before {
 	content: '\f00e';
 	transform: translateY(-6%); /* アイコンが若干下よりに見えてしまうので上に寄せる */
+}
+
+/* --- --- --- アイコン --- --- --- */
+
+/* span タグの ::before 疑似要素としてアイコンを生成しないと、 IE で アイコンにも a タグの下線が入ってしまう */
+.el_beforeIcon::before {
+	display: inline-block;
+	margin-right: .3em; /* フォントサイズが変わってもアイコンとテキストの間を適切に開けるためのスタイリング */
+	color: #e25c00;
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 400; /* Font Awesome のアイコンを表示させるための指定 */
+}
+
+.el_beforeIcon.el_beforeIcon__pdf::before {
+	content: '\f1c1';
+}
+
+.el_beforeIcon.el_beforeIcon__excel::before {
+	content: '\f1c3';
+}
+
+.el_beforeIcon.el_beforeIcon__PP::before {
+	content: '\f1c4';
+}
+
+.el_beforeIcon.el_beforeIcon__checkSquare::before {
+	content: '\f14a';
+}
+
+.el_beforeIcon.el_beforeIcon__chevLeft::before { /* 三角形の1辺gないような図形歯 chevron と呼ぶ */
+	content: '';
+	width: .375em;
+	height: .375em;
+	border-bottom: .125em solid #e25c00; /* 矢印のベースとなる図形を border-bottom, border-left で描画 */
+	border-left: .125em solid #e25c00;
+	transform: rotate(45deg) translateY(-30%); /* 45度時計回りに回転させて、30%上に移動する */
+}
+
+.el_afterIcon::after {
+	display: inline-block;
+	margin-left: .3em;
+	color: #e25c00;
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+}
+
+.el_afterIcon.el_afterIcon__chevRight::after {
+	content: '';
+	width: .375em;
+	height: .375em;
+	border-top: .125em solid #e25c00;
+	border-right: .125em solid #e25c00;
+	transform: rotate(45deg) translateY(-15%);
 }
 
 /* === === === ヘルパーグループ === === === */
