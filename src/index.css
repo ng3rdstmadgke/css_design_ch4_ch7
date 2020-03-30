@@ -431,6 +431,14 @@ a.el_label:hover {
 	font-size: 1.125rem;
 }
 
+.el_caution { /* hp_red だと、後で太字にしたくなったりしたときに整合性が取れなくなるので、クラス名には意味のある単語をつけるのがよい */
+	color: #d40152;
+}
+
+.el_note {
+	font-size: .75rem;
+}
+
 /* === === === ヘルパーグループ === === === */
 
 .hp_btGray {
