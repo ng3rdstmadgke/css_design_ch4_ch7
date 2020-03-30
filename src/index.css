@@ -242,6 +242,38 @@ img {
 	color: #e25c00;
 }
 
+.el_beforeIconBtn {
+	/* 使用されるコンテキストのフォントサイズに合わせたいため、フォントサイズは設定しない */
+	position: relative;
+	display: inline-block;
+	padding: .2em .3em; /* フォントサイズが可変のモジュールの余白はフォントサイズに由来する相対値で設定するのが定石 */
+	border: 1px solid currentColor;
+	color: #e25c00;
+	text-decoration: none;
+	transition: .25s;
+}
+
+.el_beforeIconBtn:focus,
+.el_beforeIconBtn:hover {
+	background-color: #e25c00;
+	color: #fff;
+}
+
+.el_beforeIconBtn::before {
+	margin-right: .5em;
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+}
+
+.el_beforeIconBtn.el_beforeIconBtn__download::before {
+	content: '\f019';
+}
+
+.el_beforeIconBtn.el_beforeIconBtn__zoom::before {
+	content: '\f00e';
+	transform: translateY(-6%); /* アイコンが若干下よりに見えてしまうので上に寄せる */
+}
+
 /* === === === ヘルパーグループ === === === */
 
 .hp_btGray {
