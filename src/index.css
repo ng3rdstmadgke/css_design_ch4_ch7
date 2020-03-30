@@ -58,9 +58,6 @@ img {
 }
 
 /**
- * ■ flex: https://developer.mozilla.org/ja/docs/Web/CSS/display
- * 要素の表示種別を指定する
- *
  * ■ justify-content: https://developer.mozilla.org/ja/docs/Web/CSS/justify-content
  * フレックスコンテナ内のアイテムの間隔や配置を定義する
  */
@@ -72,8 +69,8 @@ img {
 /**
  * ■flex : https://developer.mozilla.org/ja/docs/Web/CSS/flex
  * flex-grow, flex-shrink, flex-basisをまとめて指定する
- * flex-grow: 子要素の伸びる比率。指定する数字が大きくなるとその分だけ伸長するようになる。0は伸長しない
- * flex-shrink: 子要素の縮む比率。指定する数字が大きくなるとその分だけ縮むようになる。0は縮まない
+ * flex-grow: 子要素の伸びる比率。指定する数字が大きくなるとその分だけ伸長するようになる。0は伸長しない。(default=0)
+ * flex-shrink: 子要素の縮む比率。指定する数字が大きくなるとその分だけ縮むようになる。0は縮まない。(default=1)
  * flex-basis: フレックスアイテムの初期の寸法を設定する。
  */
 .ly_cont_main {
@@ -103,7 +100,7 @@ img {
 	}
 }
 
-/* === === === モジュールグループ === === === */
+/* === === === モジュールグループ(エレメントモジュール) === === === */
 
 /* --- --- --- ボタン --- --- --- */
 /**
@@ -112,6 +109,8 @@ img {
  * inline: 初期値。インラインボックスを生成する。
  * block: ブロックボックスを生成する。
  * inline-block: インラインレベルのブロックコンテナを生成する。要素の並びはinline的(横並び)で、要素の中身はblock的な性質を持つ。
+ * flex: ブロックレベルのフレックスコンテナを生成する。 https://developer.mozilla.org/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
+ * 要素の表示種別を指定する
  *
  * ■ border : https://developer.mozilla.org/ja/docs/Web/CSS/border
  * border-width, border-style, border-color を一括設定する
@@ -444,6 +443,57 @@ a.el_label:hover {
 
 .el_note {
 	font-size: .75rem;
+}
+
+/* === === === モジュールグループ(ブロックモジュール) === === === */
+
+/**
+ * ■ align-items: https://developer.mozilla.org/ja/docs/Web/CSS/align-items
+ * フレックスコンテナ内のアイテムの垂直方向の揃えを指定
+ * stretch: 初期値。縦方向に伸ばせるだけ伸ばす。
+ * flex-start: 上に寄せる
+ * flex-end: 下に寄せる
+ * center: 中央に寄せる
+ */
+.bl_media {
+	display: flex; /* 画像とテキストを横並びにして天地中央揃えにしたい場合は display: flex; align-items: center */
+	align-items: center; /* 上付きにしたい倍は flex-start, 下付きにしたい場合は flex-end */
+}
+
+.bl_media_imgWrapper {
+	flex: 0 1 27.58333%; /* flex-grow: 0;  flex-shrink: 1; flex-basis: 27.58333%
+	                      * スクリーンサイズを縮小したときに画像、テキスト両方を自然に縮小させるための指定 */
+	margin-right: 3.33333%; /* 画像の右のマージン40px(css-wipeのデフォルト?)を メイン幅の1200pxで割ったもの。
+	                         * %で指定すると、スクリーンを縮小したときに画像と記事の間の余白も小さくなる */
+}
+
+.bl_media_imgWrapper > img {
+	width: 100%;
+}
+
+.bl_media_body {
+	flex: 1; /* flex-grow: 1 : アイテムが伸長する */
+}
+
+.bl_media_body > *:last-child { /* 最後の要素の余白をリセット */
+	margin-bottom: 0; /* 最後の子要素の余白を詰めると、要素が一個になっても、天地中央揃えになる */
+}
+
+.bl_media_ttl {
+	margin-bottom: 10px;
+	font-size: 1.125rem;
+	font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+	.bl_media {
+		display: block; /* メディアクエリ適用時は画像が上、テキストが下の縦並びレイアウトになってほしい */
+	}
+
+	.bl_media_imgWrapper {
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
 }
 
 /* === === === ヘルパーグループ === === === */
