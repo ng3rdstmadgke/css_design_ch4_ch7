@@ -330,6 +330,51 @@ img {
 	transform: rotate(45deg) translateY(-15%);
 }
 
+/* --- --- --- ラベル --- --- --- */
+
+.el_label {
+	display: inline-block;
+	padding: .2em .3em; /* ボタンと同様に高さや横幅の確保は height, width ではなく padding で行う */
+	background-color: #e25c00;
+	color: #fff;
+	font-size: .75rem;
+	font-weight: bold;
+	border: 2px solid transparent;
+}
+
+.el_label.el_label__yellow {
+	background-color: #f1de00;
+	color: #000;
+}
+
+a.el_label { /* a タグに el_label が適用されたときのみ 動きをつける */
+	text-decoration: none;
+	transition: .25s;
+}
+
+a.el_label:focus,
+a.el_label:hover {
+	background-color: #fff;
+	border-color: currentColor;
+	color: #e25c00;
+}
+
+/**
+ * ■ border-radius : http://www.htmq.com/css3/border-radius.shtml
+ * ボックスの4つのコーナーの角丸をまとめて指定できる
+ * border-radius: 100px 25px 50px 50px / 50px 25px 50px 25px
+ *                水平方向(左上, 右上, 右下, 左下) / 垂直方向(左上, 右上, 右下, 左下)
+ */
+.el_roundedLabel {
+	display: inline-block;
+	padding: .3em .9em; /* 楕円にしたとき詰まって見えてしまわないように少し広く余白を取る */
+	background-color: #e25c00;
+	border-radius: 1em; /* 単位に em を使用すると、上下を潰さない形で楕円を実現することができる */
+	color: #fff;
+	font-size: .75rem;
+	font-weight: bold;
+}
+
 /* === === === ヘルパーグループ === === === */
 
 .hp_btGray {
