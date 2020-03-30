@@ -132,6 +132,9 @@ img {
  * transition-duration: トランジションにかかる所要時間(default=0s): https://developer.mozilla.org/ja/docs/Web/CSS/transition-duration
  * transition-timing-function: トランジション実行時の中間状態の遷移を指定する関数(default=ease): https://developer.mozilla.org/ja/docs/Web/CSS/transition-timing-function
  * transition-delay: トランジションが実行されるまでの待ち時間(defualt=0s): https://developer.mozilla.org/ja/docs/Web/CSS/transition-delay
+ *
+ * ■ background-color
+ * padding, border 領域まで background。 margin は background 領域ではない。
  */
 .el_btn {
 	display: inline-block; /* 要素の並びはinline的(横並び)で、要素の中身はblock的な性質を持つ。(親要素のtext-alignを継承してくれるため位置調整のcssが要らなくなる) */
@@ -156,7 +159,7 @@ img {
 .el_btn:focus,
 .el_btn:hover {
 	background-color: #fff;
-	border-color: currentColor;
+	border-color: currentColor; /* colorプロパティに設定されている値を利用する */
 	color: #e25c00;
 }
 
@@ -216,6 +219,28 @@ img {
 	border-color:  #f1de00;
 }
 
+.el_roundedBtn {
+	display: inline-block;
+	width: 236px;
+	max-width: 100%;
+	padding: 15px 10px;
+	background-color: #e25c00;
+	border: 2px solid transparent;
+	border-bottom-color: #d40152;
+	border-radius: 10px;
+	color: #fff;
+	font-size: 1.125rem;
+	text-align: center;
+	text-decoration: none;
+	transition: .25s;
+}
+
+.el_roundedBtn:focus,
+.el_roundedBtn:hover {
+	background-color: #fff;
+	border-color: currentColor;
+	color: #e25c00;
+}
 
 /* === === === ヘルパーグループ === === === */
 
