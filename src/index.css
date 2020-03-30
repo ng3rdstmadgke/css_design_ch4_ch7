@@ -133,11 +133,16 @@ img {
 	transition: all .25s; /* プロパティ名, 所要時間 */
 }
 
-.el_btn.el_btn__large {
-	width: 340px;
-	padding-top: 25px; /* 高さを増すためには .el_btn のスタイルと同様に height ではなく padding を使用する */
-	padding-bottom: 25px;
-	font-size: 1.375rem;
+/**
+ * 擬似クラス
+ * forcus: tabで要素にフォーカスしたとき
+ * hover: カーソルを要素の上に置いたとき
+ */
+.el_btn:focus,
+.el_btn:hover {
+	background-color: #fff;
+	border-color: currentColor;
+	color: #e25c00;
 }
 
 .el_btn.el_btn__arrowRight {
@@ -175,16 +180,23 @@ img {
 	font-weight: 900;
 }
 
-/**
- * 擬似クラス
- * forcus: tabで要素にフォーカスしたとき
- * hover: カーソルを要素の上に置いたとき
- */
-.el_btn:focus,
-.el_btn:hover {
+.el_btn.el_btn__large {
+	width: 340px;
+	padding-top: 25px; /* 高さを増すためには .el_btn のスタイルと同様に height ではなく padding を使用する */
+	padding-bottom: 25px;
+	font-size: 1.375rem;
+}
+
+
+.el_btn.el_btn__yellow {
+	background-color: #f1de00;
+	color: #222;
+}
+
+.el_btn.el_btn__yellow:focus,
+.el_btn.el_btn__yellow:hover {
 	background-color: #fff;
-	border-color: currentColor;
-	color: #e25c00;
+	border-color:  #f1de00;
 }
 
 
