@@ -496,6 +496,25 @@ a.el_label:hover {
 	}
 }
 
+.bl_media.bl_media__rev {
+	flex-direction: row-reverse; /* 横並びレイアウト。右から左 */
+}
+
+.bl_media__rev .bl_media_imgWrapper {
+	margin-right: 0; /* 余白のとり方は、 margin-right で統一したいため、画像のmargin-rightを0にして、テキストのmargin-rightをせっていする */
+}
+
+.bl_media__rev .bl_media_body {
+	margin-right: 3.33333%; /* 余白のとり方は、 margin-right で統一したいため、画像のmargin-rightを0にして、テキストのmargin-rightをせっていする */
+	text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+	.bl_media__rev .bl_media_body {
+		margin-right: 0; /* 要素が縦並びになったときに、テキストの不要なmargin-rightを取り除く */
+	}
+}
+
 /* === === === ヘルパーグループ === === === */
 
 .hp_btGray {
