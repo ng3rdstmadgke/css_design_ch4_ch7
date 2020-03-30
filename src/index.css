@@ -190,6 +190,9 @@ img {
  *
  * ■ transform
  * 要素を回転、拡大縮小、傾斜、移動させることができる
+ *
+ * ■ 左右天地中央揃え(position: absolute; 適用時)
+ * top: 50%; left: 50%; transform: translate(-50%, -50%);
  */
 .el_btn.el_btn__arrowRight::after {
 	content: '\f061';
@@ -373,6 +376,59 @@ a.el_label:hover {
 	color: #fff;
 	font-size: .75rem;
 	font-weight: bold;
+}
+
+.el_lv1Heading {
+	padding: 30px 10px;
+	background-color: #e25c00;
+	color: #fff;
+	font-size: 1.75rem;
+	text-align: center;
+}
+
+.el_lv1Heading > span {
+	position: relative;
+	display: inline-block;
+	transform: translateY(-20%); /* 下線があるのでテキストを微妙に上にずらす */
+}
+
+.el_lv1Heading > span::after { /* 下線部分は ::after 疑似要素 で作成する */
+	content: '';
+	position: absolute;
+	bottom: -10px;
+	left: 50%; /* left: 50%, transform: translateX(-50%) は左右中央揃えの定石 */
+	width: 80px;
+	height: 1px;
+	background-color: currentColor;
+	transform: translateX(-50%);
+}
+
+.el_lv2Heading {
+	padding-bottom: 10px;
+	border-bottom: 4px solid #e25c00;
+	font-size: 1.75rem;
+	font-weight: bold;
+	/* レイアウトのスタイリングを含めるべきではないが、「必ず100px空ける」みたいにルールが統一されているならあり (ハーフリーディングは考慮しない)
+	 * margin-top: 100px;
+	 * margin-bottom: 20px;
+	 */
+}
+
+.el_lv3Heading {
+	padding-bottom: 6px;
+	border-bottom: 2px solid #e25c00;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.el_lv5Heading {
+	color: #e25c00;
+	font-size: 1.125rem;
+	font-weight: bold;
+}
+
+.el_lv6Heading {
+	font-size: 1.125rem;
 }
 
 /* === === === ヘルパーグループ === === === */
