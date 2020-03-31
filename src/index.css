@@ -12,7 +12,7 @@ a {
 }
 
 img {
-	max-width: 100px;
+	/* max-width: 100px; */
 	vertical-align: top;
 }
 
@@ -563,6 +563,104 @@ a.el_label:hover {
 		margin-bottom: 20px;
 	}
 }
+
+/* --- --- --- カード --- --- --- */
+
+.bl_card {
+	box-shadow: 0 3px 6px rgba(0,0,0,.16);
+}
+
+.bl_card_imgWrapper {
+	position: relative;
+	padding-top: 56.25%; /* 子要素の画像の表示領域としての高さを確保するため。画像はposition: absoluteなのでheightだと高さを確保できない */
+	overflow: hidden; /* はみ出た画像はトリミング */
+}
+
+.bl_card_imgWrapper > img { /* 親要素のpadding-top 領域に画像を天地中央で表示させるための指定 */
+	position: absolute;
+	top: 50%;
+	width: 100%; /* 親要素の横幅いっぱいまで広がる */
+	transform: translateY(-50%);
+}
+
+.bl_card_body {
+	padding: 15px;
+}
+
+.bl_card_body > *:last-child {
+	margin-bottom: 0;
+}
+
+.bl_card_ttl {
+	margin-bottom: 5px;
+	font-size: 1.125rem;
+	font-weight: bold;
+}
+
+.bl_card_txt {
+	color: #777;
+}
+
+/* --- --- --- カード(バッジ付き) --- --- --- */
+.bl_card_badge {
+	position: relative;
+}
+
+.bl_card_badge::after { /* ::after疑似要素で三角形を描画 */
+	content: ''; /* 高さも幅もない、点のような要素を作る */
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-width: 3.75rem 3.75rem 0 0; /* 三角形を作るジェネレータが存在する: http://apps.eky.hk/css-triangle-generator/ */
+	border-style: solid;
+	border-color: #e25c00 transparent transparent transparent;
+}
+
+.bl_card_badge_txt {
+	position: absolute;
+	z-index: 2;
+	top: .5rem;
+	left: .3125rem;
+	color: #fff;
+	font-size: .875rem;
+	font-weight: bold;
+	transform: rotate(-45deg); /* バッジに合わせてテキストを回転 */
+}
+
+/* --- --- --- カード(リンク) --- --- --- */
+a.bl_card {
+	display: block;
+	color: currentColor;
+	text-decoration: none;
+	transition: .25s;
+}
+
+a.bl_card .bl_card_ttl,
+a.bl_card .bl_card_txt {
+	transition: .25s;
+}
+
+/**
+ * ■ opacity
+ * 要素の透明度を指定する
+ */
+a.bl_card:focus,
+a.bl_card:hover {
+	opacity: .75;
+}
+
+a.bl_card:focus .bl_card_ttl,
+a.bl_card:hover .bl_card_txt,
+a.bl_card:focus .bl_card_ttl,
+a.bl_card:hover .bl_card_txt {
+	color: #e25c00;
+	text-decoration: underline;
+}
+
+
 
 /* === === === ヘルパーグループ === === === */
 
