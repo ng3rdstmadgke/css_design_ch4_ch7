@@ -929,7 +929,8 @@ a.bl_card:hover .bl_card_txt {
 	width: 40px;
 	height: 40px;
 	border: 1px solid currentColor;
-	color: #e25c00;text-decoration: none;
+	color: #e25c00;
+	text-decoration: none;
 	transition: .25s;
 }
 .bl_pager_link:focus,
@@ -943,6 +944,53 @@ a.bl_card:hover .bl_card_txt {
 	color: #fff;
 	pointer-events: none; /* hover, click, focus などのイベントの対象外にする */
 }
+
+/* --- --- --- タブナビゲーション --- --- --- */
+.bl_tabNav_inner {
+	display: flex; /* display: flex; align-items: center; justify-content: center は 子要素を左右天地中央揃えで配置する */
+	align-items:center;
+	justify-content: center;
+	flex-wrap: wrap; /* 子要素がコンテンツ幅をはみ出したときに折り返す */
+	margin-bottom: -10px; /* .bl_tabNav_link の margin-bottom を打ち消す */
+}
+
+.bl_tabNav_link {
+	display: inline-block;
+	padding-right: 30px;
+	padding-bottom: 10px;
+	padding-left: 30px;
+	margin-bottom: 10px; /* ナビゲーションが折り返した際に、1行目と2行目の間がつまりすぎないようにする */
+	border-bottom: 4px solid #efefef;
+	text-decoration: none;
+	transition: .25s;
+}
+
+.bl_tabNav_link:focus,
+.bl_tabNav_link:hover {
+	border-bottom-color: currentColor;
+	color: #e25c00;
+	opacity: .75;
+}
+
+.bl_tabNav_link.is_active {
+	border-bottom-color: currentColor;
+	color: #e25c00;
+	pointer-events: none;
+}
+
+@media screen and (max-width: 768px) {
+	.bl_tabNav {
+		overflow-x: auto;
+	}
+
+	.bl_tabNav_inner {
+		flex-wrap: nowrap; /* ナビゲーションがコンテンツ幅をはみ出したときに折り返さない */
+		justify-content: flex-start; /* アイテムを左寄せにする。これがないと左側の項目をクリックできなくなる */
+		margin-bottom: 0;
+		white-space: nowrap;
+	}
+}
+
 
 
 
