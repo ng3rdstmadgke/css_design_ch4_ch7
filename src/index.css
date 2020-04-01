@@ -1144,6 +1144,65 @@ a.bl_card:hover .bl_card_txt {
 	}
 }
 
+/* --- --- --- Q&A --- --- --- */
+.bl_faq > *:last-child {
+	margin-bottom: 0;
+}
+.bl_faq_q,
+.bl_faq_a {
+	position: relative; /* アイコンをposition: absoluteで配置するための指定 */
+	display: flex;
+	align-items: flex-start;
+	box-sizing: content-box;
+	min-height: 45px;
+	padding-left: 60px; /* アイコンを表示するための領域 */
+}
+.bl_faq_q {
+	margin-bottom: 15px;
+	font-size: 1.125rem;
+	font-weight: bold;
+}
+.bl_faq_q_txt {
+	padding-top: 12px;
+}
+.bl_faq_a {
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #ddd;
+}
+/**
+ * ■ line-height: https://developer.mozilla.org/ja/docs/Web/CSS/line-height
+ * 行の高さを指定する
+ */
+.bl_faq_icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 45px; /* 正方形を作る */
+	height: 45px; /* 正方形を作る */
+	border-radius: 50%; /* 正円を作る */
+	font-weight: normal;
+	line-height: 45px; /* height と同じ値にすることで天地中央揃えができる*/
+	text-align: center;
+}
+.bl_faq_q .bl_faq_icon {
+	background-color: #e25c00;
+	color: #fff;
+}
+.bl_faq_a .bl_faq_icon {
+	background-color: #efefef;
+	color: #e25c00;
+}
+.bl_faq_a_body { /* bl_faq_a_txt を複数用意したくなったときに、ラッパーとして必要なクラス。ないと親の display: flex の影響で bl_faq_a_txt が横並びになってしまう。 */
+	padding-top: 12px;
+}
+.bl_faq_a_body > *:last-child {
+	margin-bottom: 0;
+}
+.bl_faq_a_txt {
+	margin-bottom: 20px;
+}
+
 /* === === === ヘルパーグループ === === === */
 
 .hp_btGray {
