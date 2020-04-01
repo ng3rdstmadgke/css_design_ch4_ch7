@@ -714,6 +714,194 @@ a.bl_card:hover .bl_card_txt {
 	}
 }
 
+/* --- --- --- 水平テーブル --- --- --- */
+
+.bl_horizTable {
+	border: 1px solid #ddd;
+}
+
+.bl_horizTable table {
+	width: 100%;
+}
+
+/**
+ * ■ vertical-align : https://developer.mozilla.org/ja/docs/Web/CSS/vertical-align
+ * インラインボックス、表セルボックスの垂直方向の配置を指定する。
+ */
+.bl_horizTable th {
+	width: 20%;
+	padding: 15px;
+	background-color: #efefef;
+	border-bottom: 1px solid #ddd;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+.bl_horizTable td {
+	padding: 15px;
+	border-bottom: 1px solid #ddd;
+}
+
+.bl_horizTable tr:last-child th,
+.bl_horizTable tr:last-child td {
+	border-bottom-width: 0; /* .bl_horizTable の border とかぶらないように */
+}
+
+/* --- --- --- 水平テーブル(メディアクエリ時にスクロール) --- --- --- */
+
+/**
+ * ■ overflow-x: http://www.htmq.com/css/overflow-x.shtml
+ * ボックスの範囲に内容が収まらない場合にはみ出た左右の表示方法を指定する。
+ */
+@media screen and (max-width: 768px) {
+	.bl_horizTable.bl_horizTable__mdScroll {
+		border-right-width: 0; /* 右側の border を消してスクロールできることを示す */
+		overflow-x: auto; /* ボックスに収まらない場合に同表示するかはユーザーエージェントに依存。スクロールバーなどが表示される */
+	}
+	/**
+	 * ■ white-space: https://developer.mozilla.org/ja/docs/Web/CSS/white-space
+	 * タブ、スペース、改行などの表示を指定する
+	 */
+	.bl_horizTable.bl_horizTable__mdScroll th,
+	.bl_horizTable.bl_horizTable__mdScroll td {
+		white-space: nowrap; /* 連続するホワイトスペースをまとめるが行の折り返しは行わない */
+	}
+	.bl_horizTable.bl_horizTable__mdScroll td {
+		border-right: 1px solid #ddd;
+	}
+}
+
+/* --- --- --- テーブル(垂直) --- --- --- */
+
+.bl_vertTable {
+	border: 1px solid #ddd;
+}
+
+/**
+ * ■ text-align: http://www.htmq.com/style/text-align.shtml
+ * ブロックコンテナ内の行の揃え位置・均等割り付けを指定する。
+ *
+ * ■ table-layout: https://developer.mozilla.org/ja/docs/Web/CSS/table-layout
+ * <table> のセル、行、列のレイアウトに使用されるアルゴリズムを設定する。
+ * auto: 既定値。表とセルの幅は中身に合うように調整される。
+ * fixed: 表と列の幅は table 要素 と col 要素の幅によって、または最初の行のセル幅によって設定される。後続するb業のセルは列幅の設定に影響しない。
+ */
+.bl_vertTable table {
+	width: 100%;
+	text-align: center; /* インラインレベルのコンテンツは、ラインボックスの中央に配置される */
+	table-layout: fixed;
+}
+
+.bl_vertTable thead tr {
+	background-color: #efefef;
+}
+
+.bl_vertTable th {
+	padding: 15px;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+.bl_vertTable td {
+	padding: 15px;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	vertical-align: middle;
+}
+
+.bl_vertTable th:last-child,
+.bl_vertTable td:last-child {
+	border-right-width: 0; /* 最終列の border-right が .bl_vertTable の border 指定とかぶらないようにする */
+}
+
+.bl_vertTable tbody tr:last-child td {
+	border-bottom-width: 0; /* 最終行の border-bottom が .bl_vertTable の border 指定とかぶらないようにする */
+}
+
+@media screen and (max-width: 768px) {
+	.bl_vertTable {
+		border-right-width: 0;
+		overflow-x: auto;
+	}
+	.bl_vertTable table {
+		width: auto;
+		min-width: 100%;
+	}
+	.bl_vertTable th,
+	.bl_vertTable td {
+		white-space: nowrap;
+	}
+	.bl_vertTable th:last-child,
+	.bl_vertTable td:last-child {
+		border-right-width: 1px;
+	}
+}
+
+/* --- --- --- 交差テーブル --- --- --- */
+.bl_crossTable {
+	border: 1px solid #ddd;
+}
+
+.bl_crossTable table {
+	width: 100%;
+	text-align: center;
+	table-layout: fixed;
+}
+
+.bl_crossTable th {
+	padding: 15px;
+	background-color: #efefef;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+.bl_crossTable td {
+	padding: 15px;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	vertical-align: middle;
+}
+
+.bl_crossTable th:last-child,
+.bl_crossTable th:last-child {
+	border-right-width: 0;
+}
+
+.bl_crossTable tbody tr:last-child th,
+.bl_crossTable tbody tr:last-child td {
+	border-bottom-width: 0;
+}
+
+@media screen and (max-width: 768px) {
+	.bl_crossTable {
+		border-right-width: 0;
+		overflow-x: auto;
+	}
+	.bl_crossTable table {
+		width: auto;
+		min-width: 100%;
+	}
+	.bl_crossTable th,
+	.bl_crossTable td {
+		white-space: nowrap;
+	}
+	.bl_crossTable th:last-child,
+	.bl_crossTable td:last-child {
+		border-right-width: 1px;
+	}
+	.bl_crossTable_mdSticky { /* メディアクエリ時に固定したい見出しに対するクラス指定 */
+		position: -webkit-sticky; /* 特定の位置に固定して表示する */
+		position: sticky; /* 特定の位置に固定して表示する */
+		left: 0; /* 左側の0のいちに配置 */
+	}
+}
+
+
+
 
 /* === === === ヘルパーグループ === === === */
 
