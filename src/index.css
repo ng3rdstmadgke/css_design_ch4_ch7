@@ -953,7 +953,6 @@ a.bl_card:hover .bl_card_txt {
 	flex-wrap: wrap; /* 子要素がコンテンツ幅をはみ出したときに折り返す */
 	margin-bottom: -10px; /* .bl_tabNav_link の margin-bottom を打ち消す */
 }
-
 .bl_tabNav_link {
 	display: inline-block;
 	padding-right: 30px;
@@ -964,20 +963,17 @@ a.bl_card:hover .bl_card_txt {
 	text-decoration: none;
 	transition: .25s;
 }
-
 .bl_tabNav_link:focus,
 .bl_tabNav_link:hover {
 	border-bottom-color: currentColor;
 	color: #e25c00;
 	opacity: .75;
 }
-
 .bl_tabNav_link.is_active {
 	border-bottom-color: currentColor;
 	color: #e25c00;
 	pointer-events: none;
 }
-
 @media screen and (max-width: 768px) {
 	.bl_tabNav {
 		overflow-x: auto;
@@ -991,8 +987,27 @@ a.bl_card:hover .bl_card_txt {
 	}
 }
 
+/* --- --- --- CTA --- --- --- */
+.bl_cta {
+	padding: 30px;
+	background-color: rgba(221, 116, 44, .05); /* 透明度 5% のオレンジ */
+	border: 1px solid #e25c00;
+	text-align: center;
+}
 
+.bl_cta > *:last-child {
+	margin-bottom: 0;
+}
 
+.bl_cta_ttl {
+	padding-bottom: 10px;
+	margin-top: -6px;
+	margin-bottom: 40px;
+	border-bottom: 1px solid currentColor;
+	color: #e25c00;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
 
 
 
