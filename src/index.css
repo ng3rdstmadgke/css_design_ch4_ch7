@@ -57,7 +57,13 @@ img {
 
 /**
  * ■ justify-content: https://developer.mozilla.org/ja/docs/Web/CSS/justify-content
- * フレックスコンテナ内のアイテムの間隔や配置を定義する
+ * フレックスコンテナ内のアイテムの水平方向の揃え
+ * flex-start: 初期値。左揃え
+ * flex-end: 右揃え
+ * center: 中央揃え
+ * space-between: アイテム同士の間隔が均等になるように揃える
+ * space-around: アイテムの周りのスペースが均等になるように揃える
+ *
  */
 .ly_cont.ly_cont__col {
 	display: flex;
@@ -899,6 +905,45 @@ a.bl_card:hover .bl_card_txt {
 		left: 0; /* 左側の0のいちに配置 */
 	}
 }
+
+/* --- --- --- ページャー --- --- --- */
+.bl_pager {
+	display: flex; /* 左右中央揃え */
+	overflow-x: auto; /* ページャーがコンテンツ幅を超えた場合に水平スクロールにする */
+}
+.bl_pager_inner {
+	display: flex; /* ページャー項目を横並びにする */
+	margin-right: auto; /* 左右中央揃え */
+	margin-left: auto; /* 左右中央揃え */
+}
+.bl_pager_inner > *:last-child {
+	margin-right: 0;
+}
+.bl_pager_inner > li {
+	margin-right: 15px; /* ページャーのクリッカブルな範囲は少し狭いため、どのようなスクリーンサイズでも、一律15px空いてたほうがユーザビリティが高い */
+}
+.bl_pager_link {
+	display: flex; /* display: flex; align-items: center; justify-content: center は 子要素を左右天地中央揃えで配置する */
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border: 1px solid currentColor;
+	color: #e25c00;text-decoration: none;
+	transition: .25s;
+}
+.bl_pager_link:focus,
+.bl_pager_link:hover {
+	background-color: #e25c00;
+	color: #fff;
+	opacity: .75;
+}
+.bl_pager_link.is_active {
+	background-color: #e25c00;
+	color: #fff;
+	pointer-events: none; /* hover, click, focus などのイベントの対象外にする */
+}
+
 
 
 
