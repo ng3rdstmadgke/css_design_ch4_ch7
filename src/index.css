@@ -1324,6 +1324,30 @@ a.bl_card:hover .bl_card_txt {
 		transform: translate(-50%, -50%);
 	}
 }
+
+/* --- --- --- ポストリスト --- --- --- */
+.bl_vertPosts_item {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #ddd;
+}
+.bl_vertPosts_item:first-child {
+	padding-top: 0;
+}
+.bl_vertPosts_header {
+	margin-bottom: 10px;
+}
+.bl_vertPosts_date {
+	font-size: .875rem;
+}
+.bl_vertPosts_ttl {
+	text-decoration: none;
+}
+.bl_vertPosts_ttl:focus,
+.bl_vertPosts_ttl:hover {
+	text-decoration: underline;
+}
+
 /* === === === ヘルパーグループ === === === */
 
 .hp_btGray {
