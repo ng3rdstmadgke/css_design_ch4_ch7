@@ -1021,6 +1021,11 @@ a.bl_card:hover .bl_card_txt {
 	font-weight: bold;
 }
 
+/* --- --- --- ボタン + CTA --- --- --- */
+.bl_cta_txt {
+	margin-bottom: 40px; /* テキストとボタンの間の余白 */
+}
+
 /* --- --- --- 料金表 --- --- --- */
 .bl_priceUnit { /* レイアウト用のラッパーモジュール */
 	display: flex;
