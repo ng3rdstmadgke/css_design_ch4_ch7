@@ -1365,6 +1365,27 @@ a.bl_card:hover .bl_card_txt {
 	text-decoration: underline;
 }
 
+/* --- --- --- ポストリスト + ラベル --- --- --- */
+.bl_vertPosts_header > *:last-child {
+	margin-right: 0;
+}
+.bl_vertPosts_date {
+	margin-right: 10px;
+}
+.bl_vertPosts_labels {
+	display: inline-flex; /* bl_vertPosts_date と ラベルが横並びになるようにインラインのフレックスコンテナにする */
+	flex-wrap: wrap;
+	margin-bottom: -10px;
+}
+.bl_vertPosts_labels > *:last-child {
+	margin-right: 0;
+}
+.bl_vertPosts_labels > li {
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+
 /* --- --- --- 順序なしリスト --- --- --- */
 .bl_bulletList > *:last-child {
 	margin-bottom: 0;
