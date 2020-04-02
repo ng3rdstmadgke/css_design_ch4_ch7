@@ -1451,6 +1451,27 @@ a.bl_card:hover .bl_card_txt {
 	counter-increment: bl_childOrderList;
 }
 
+/* --- --- --- 水平ボタンリスト --- --- --- */
+.bl_horizBtnList {
+	display: flex;
+	justify-content: center;
+}
+.bl_horizBtnList > *:last-child {
+	margin-right: 0;
+}
+.bl_horizBtnList > li {
+	flex: 1 1 0;
+	max-width: 300px; /* ボタンが最大幅で収まる場合は単純に横に並んだ見た目になる。収まらない場合は自動的に縮小される。 */
+	margin-right: 20px;
+}
+.bl_horizBtnList .el_btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+}
+
 /* === === === ヘルパーグループ === === === */
 .hp_btGray {
 	border-top: 1px solid #777 !important;
