@@ -1268,6 +1268,62 @@ a.bl_card:hover .bl_card_txt {
 	margin-bottom: 20px;
 }
 
+/* --- --- --- ジャンボトロン --- --- --- */
+/**
+ * ■ calc() : https://developer.mozilla.org/ja/docs/Web/CSS/calc
+ * CSSのプロパティ値を指定する際に計算を行うことができる。
+ *
+ * ■ background-position: https://developer.mozilla.org/ja/docs/Web/CSS/background-position
+ * 背景画像の初期値を設定する
+ *
+ * ■ background-size: https://developer.mozilla.org/ja/docs/Web/CSS/background-size
+ * contain: 画像をトリミングせずに、縦横比を維持して、画像ができるだけ大きくなるように拡大・縮小する
+ * cover: 縦横比を維持して、画像ができるだけ大きくなるように拡大・縮小する。空き領域が残らないように上下・左右どちらかをトリミングする
+ */
+.bl_jumbotron {
+	height: calc(69.44444vw + -233.33333px); /* スクリーンを縮小して 768pxのメディアクエリが適用されたときに、 高さがあまり変わらず、縦横比が維持されるような高さを指定する */
+	                                         /* vwはビューポートと紐付いた単位で、1vwはビューポートの横幅の1%に一致する。 https://github.com/ixkaito/viewportscale で算出できる */
+	background-position: center center; /* x座用 y座標 */
+	background-size: cover;
+}
+.bl_jumbotron_inner {
+	position: relative;
+	height: 100%;
+	max-width: 1230px; /* max-width: 1230px; margin-right: auto; margin-left: auto; はコンテンツの最大幅を設定して左右中央寄せにする */
+	margin-right: auto;
+	margin-left: auto;
+}
+.bl_jumbotron_ttl {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	padding: 40px;
+	background-color: rgba(0,0,0,.75);
+	color: #fff;
+	font-size: calc(1.81818vw + 14.18182px); /* スクリーンを縮小して 768pxのメディアクエリが適用されたときに、 自然にフォントサイズを切り替えるための指定 */
+	transform: translateY(-50%);
+}
+@media screen and (min-width: 1200px) {
+	.bl_jumbotron {
+		height: 600px; /* 高さが大きくなり続けることを防ぐ */
+	}
+	.bl_jumbotron_ttl {
+		font-size: 2.25rem; /* フォントが大きくなり続けることを防ぐ */
+	}
+}
+@media screen and (max-width: 768px) {
+	.bl_jumbotron {
+		height: 300px;
+	}
+	.bl_jumbotron_ttl {
+		left: 50%;
+		width: 90%;
+		padding: 15px;
+		font-size: 1.25rem;
+		text-align: center;
+		transform: translate(-50%, -50%);
+	}
+}
 /* === === === ヘルパーグループ === === === */
 
 .hp_btGray {
@@ -1285,5 +1341,8 @@ a.bl_card:hover .bl_card_txt {
 @media screen and (max-width: 768px) {
 	.md_only {
 		display: block !important;
+	}
+	.lg_only {
+		display: none !important;
 	}
 }
