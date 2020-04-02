@@ -568,6 +568,18 @@ a.el_label:hover {
 	}
 }
 
+/* --- --- --- ボタン + 画像半分サイズメディア --- --- --- */
+.bl_halfMedia_txt {
+	margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+	.bl_halfMedia .el_btn {
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+
 /* --- --- --- カード --- --- --- */
 
 .bl_card {
@@ -1471,6 +1483,7 @@ a.bl_card:hover .bl_card_txt {
 	width: 100%;
 	height: 100%;
 }
+
 
 /* === === === ヘルパーグループ === === === */
 .hp_btGray {
