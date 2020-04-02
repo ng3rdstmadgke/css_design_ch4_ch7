@@ -1348,6 +1348,56 @@ a.bl_card:hover .bl_card_txt {
 	text-decoration: underline;
 }
 
+/* --- --- --- 順序なしリスト --- --- --- */
+.bl_bulletList > *:last-child {
+	margin-bottom: 0;
+}
+.bl_bulletList > li {
+	position: relative;
+	padding-left: 1em;
+	margin-bottom: 10px;
+}
+.bl_bulletList > li::before {
+	content: '';
+	position: absolute;
+	top: .5em;
+	left: 0;
+	display: block;
+	width: .4em;
+	height: .4em;
+	background-color: #e25c00;
+	border-radius: 50%;
+}
+
+/* --- --- --- 順序なしリスト(横並び) --- --- --- */
+.bl_bulletList.bl_bulletList__horiz {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between; /* アイテム同士の間隔が均等になるように揃える */
+	margin-bottom: -10px;
+}
+.bl_bulletList.bl_bulletList__horiz > li {
+	flex: calc(50% - 5px); /* リスト要素の基本幅を設定している。親要素の幅の半分 - margin-rightの半分。 要するに2列で表示するための設定。*/
+	margin-right: 10px;
+}
+.bl_bulletList.bl_bulletList__horiz > li:nth-of-type(even) {
+	margin-right: 0;
+}
+
+/* --- --- --- 順序なしリスト(ネスト) --- --- --- */
+
+.bl_bulletList ul {
+	padding-left: 1.5em;
+	margin-top: 10px;
+	list-style-type: circle;
+}
+.bl_bulletList ul > *:last-child {
+	margin-bottom: 0;
+}
+.bl_bulletList ul > li {
+	margin-bottom: 10px;
+}
+
 /* === === === ヘルパーグループ === === === */
 
 .hp_btGray {
