@@ -1203,6 +1203,71 @@ a.bl_card:hover .bl_card_txt {
 	margin-bottom: 20px;
 }
 
+/* --- --- --- アコーディオン --- --- --- */
+.bl_accordion_body + dt {
+	margin-top: 20px; /* .bl_accordion_body は display: none になっており、margin値が算出されないため、直後のdt要素にmargin-topを設定する */
+}
+/**
+ * ■ cursor: https://developer.mozilla.org/ja/docs/Web/CSS/cursor
+ * マウスポインターが要素の上にいるときに表示されるカーソルの種類を設定する。
+ */
+.bl_accordion_btn {
+	position: relative;
+	display: block; /* button要素は display: inline-block であるため、ブロック要素とするために指定する */
+	width: 100%; /* button要素は width: auto であるため、横幅を100&にするために指定する */
+	padding: 10px 40px 10px 15px;
+	background-color: #e25c00;
+	color: #fff;
+	font-size: 1.125rem;
+	text-align: left;
+	cursor: pointer; /* クリッカブルな要素であることを明示するために cursorをpointerに設定する */
+	transition: .25s;
+}
+.bl_accordion_btn::before { /* プラス・マイナスアイコン両方の横棒を生成 */
+	content: '';
+	position: absolute; /* position: absolute; top: 50%; right: 15px で右から15px、天地中央の位置に要素を配置 */
+	top: 50%;
+	right: 15px;
+	display: block; /* display: block; width: 20px; height: 2px; background-color: currentColor で横棒を描画 */
+	width: 20px;
+	height: 2px;
+	background-color: currentColor;
+	transform: translateY(-50%);
+}
+.bl_accordion_btn::after { /* プラスアイコンの縦棒を生成 */
+	content: '';
+	position: absolute; /* position: absolute; top: 50%; right: 24px; で右から24px、天地中央の位置に配置 */
+	top: 50%;
+	right: 24px;
+	display: block; /* display: block; width: 2px; height: 20px; background-color: currentColor で横棒を描画 */
+	width: 2px;
+	height: 20px;
+	background-color: currentColor;
+	transform: translateY(-50%);
+}
+.bl_accordion_btn:focus,
+.bl_accordion_btn:hover {
+	background-color: #fff;
+	color: #e25c00;
+}
+.bl_accordion_btn.is_active::after {
+	content: none; /* アコーディオンが開かれているときにプラスアイコンの縦棒を消す */
+}
+.bl_accordion_body {
+	display: none; /* アコーディオンが閉じられているときは .bl_accordion_body を表示しない */
+	padding:15px;
+	border: 1px solid #ddd;
+}
+.bl_accordion_body > *:last-child {
+	margin-bottom: 0;
+}
+.bl_accordion_body.is_active {
+	display: block;
+}
+.bl_accordion_txt {
+	margin-bottom: 20px;
+}
+
 /* === === === ヘルパーグループ === === === */
 
 .hp_btGray {
