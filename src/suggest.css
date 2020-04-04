@@ -1,0 +1,267 @@
+body {
+	padding: 50px;
+}
+/* === === === モジュール === === === */
+
+/* --- --- --- コンテナ --- --- --- */
+.bl_suggestContainer {
+	display: flex;
+	font-size: 16px;
+	color: #212121;
+	line-height: 1;
+	font-family: sans-serif;
+}
+.bl_suggestContainer_keyword {
+	width: 350px;
+	border: 1px solid #d4d9dc;
+}
+
+.bl_suggestContainer_item {
+}
+
+/* --- --- --- サジェスト --- ---- --- */
+.bl_suggest_header {
+	font-size: 0.75em;
+	padding: .5em;
+	background-color: #d4d9dc;
+	font-weight: bold;
+	color: #888;
+}
+.bl_suggest_body {
+	/* height: calc(2em * 2); */
+	padding: 0 .3em;
+	overflow-y: scroll;
+}
+.bl_suggest_item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid #d4d9dc;
+	padding: .4em;
+	cursor: pointer;
+}
+.bl_suggest_item:last-child {
+	border-bottom: 0;
+}
+.bl_suggest_item:focus,
+.bl_suggest_item:hover {
+	background-color: #f5f5f5;
+}
+.bl_suggest_label {
+	display: block;
+	flex-grow: 0;
+	flex-shrink: 0;
+	margin-right: .5em;
+}
+.bl_suggest_keyword {
+	display: block;
+	flex-grow: 1;
+	white-space: nowrap;
+	overflow-x: auto;
+	margin-right: 1em;
+}
+
+/* --- --- --- 検索履歴 --- ---- --- */
+.bl_history_header {
+	font-size: 0.75em;
+	padding: .5em;
+	background-color: #d4d9dc;
+	font-weight: bold;
+	color: #888;
+}
+.bl_history_body {
+	/* height: calc(2em * 2); */
+	padding: 0 .3em;
+	overflow-y: scroll;
+}
+.bl_history_item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid #d4d9dc;
+	padding: .4em;
+	cursor: pointer;
+}
+.bl_history_item:last-child {
+	border-bottom: 0;
+}
+.bl_history_item:focus,
+.bl_history_item:hover {
+	background-color: #f5f5f5;
+}
+.bl_history_label {
+	display: block;
+	flex-grow: 0;
+	flex-shrink: 0;
+	margin-right: .5em;
+}
+.bl_history_keyword {
+	display: block;
+	flex-grow: 1;
+	white-space: nowrap;
+	overflow-x: auto;
+	margin-right: 1em;
+}
+
+/* --- --- --- ランキング --- --- --- */
+.bl_rank {
+	counter-reset: bl_rank 0; /* 変数名と初期値を定義 */
+}
+.bl_rank_header {
+	font-size: 0.75em;
+	padding: .5em;
+	background-color: #d4d9dc;
+	font-weight: bold;
+	color: #888;
+}
+.bl_rank_body {
+	/* height: calc(2em * 2); */
+	padding: 0 .3em;
+	overflow-y: scroll;
+}
+.bl_rank_item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid #d4d9dc;
+	padding: .4em;
+	cursor: pointer;
+	counter-increment: bl_rank; /* カウンタをインクリメント */
+}
+.bl_rank_item:last-child {
+	border-bottom: 0;
+}
+.bl_rank_item:focus,
+.bl_rank_item:hover {
+	background-color: #f5f5f5;
+}
+.bl_rank_label {
+	display: block;
+	flex-grow: 0;
+	flex-shrink: 0;
+	margin-right: .5em;
+}
+.bl_rank_keyword {
+	flex-grow: 1;
+	display: block;
+	white-space: nowrap;
+	overflow-x: auto;
+	margin-right: 1em;
+}
+.bl_rankIcon {
+	font-weight: bold;
+	color: #a9a9a9;
+}
+.bl_rankIcon::before {
+	content: counter(bl_rank) '.';
+}
+
+/* === === === エレメント === === === */
+
+/* --- --- --- hitnum --- --- --- */
+.el_hitnum {
+	color: #888;
+	font-size: 0.75em;
+}
+
+/* --- --- --- ラベル --- --- --- */
+.el_label {
+	display: inline-block;
+	padding: .3em .7em;
+	background-color: #d4d9dc;
+	border-radius: .3em;
+	color: #696969;
+	font-size: .7em;
+}
+
+/* --- --- --- 削除ボタン --- --- --- */
+.el_crossBtn {
+	position: relative;
+	display: inline-block;
+	padding: .5em;
+	border-radius: .5em;
+	background-color: #d3d6dd;
+	color: #888;
+	cursor: pointer;
+	transition: .25s;
+}
+.el_crossBtn::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	display: block;
+	width: .6em;
+	height: .1em;
+	background-color: currentColor;
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+.el_crossBtn::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	display: block;
+	width: .1em;
+	height: .6em;
+	background-color: currentColor;
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+.el_crossBtn:focus,
+.el_crossBtn:hover {
+	background-color: #ff4500;
+	color: #fff;
+}
+
+/* --- --- --- 王冠マーク --- --- --- */
+.el_crownIcon {
+	display: inline-block;
+	position: relative;
+	padding: .5em;
+}
+.el_crownIcon::before {
+	content: '';
+	position: absolute;
+	left: 50%;
+	bottom: 10%;
+	width: 0;
+	height: 0;
+	border-top: 0;
+	border-right: .5em solid transparent;
+	border-bottom: .9em solid #fb0;
+	border-left: .5em solid transparent;
+	transform: translateX(-50%);
+}
+.el_crownIcon::after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	bottom: 10%;
+	width: 0;
+	height: 0;
+	border-top: .3em solid transparent;
+	border-right: .5em solid #fb0;
+	border-bottom: .4em solid #f90;
+	border-left: .5em solid #fb0;
+	transform: translateX(-50%);
+}
+
+/* --- --- --- 王冠マーク(シルバー) --- --- --- */
+.el_crownIcon__silver::before {
+	border-bottom-color: #ccc;
+}
+.el_crownIcon__silver::after {
+	border-color: #ccc;
+	border-top-color: transparent;
+	border-bottom-color: #aaa;
+}
+
+/* --- --- --- 王冠マーク(ブロンズ) --- --- --- */
+.el_crownIcon__bronze::before {
+	border-bottom-color: #d98;
+}
+.el_crownIcon__bronze::after {
+	border-color: #d98;
+	border-top-color: transparent;
+	border-bottom-color: #c76;
+}
