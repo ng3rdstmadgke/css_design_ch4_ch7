@@ -6,20 +6,46 @@ body {
 /* --- --- --- コンテナ --- --- --- */
 .bl_suggestContainer {
 	display: flex;
-	font-size: 16px;
+	flex-direction: row; /* 商品詳細を下にしたい場合は column, 左にしたい場合は row-reverse */
+	width: 700px;
+	font-size: 14px;
+	/*
+	width: 1400px;
+	font-size: 30px;
+	*/
 	color: #212121;
 	line-height: 1;
 	font-family: sans-serif;
+	box-sizing: border-box;
+	margin-top: 1px;
 }
 .bl_suggestContainer_keyword {
-	width: 350px;
-	border: 1px solid #d4d9dc;
+	width: 50%;
+	margin: 0 1px;
 }
 
 .bl_suggestContainer_item {
+	width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+	.bl_suggestContainer {
+		flex-direction: column;
+		width: 100%; /* 本当は 100vw */
+	}
+	.bl_suggestContainer_keyword {
+		width: 100%;
+		margin: 0;
+	}
+	.bl_suggestContainer_item {
+		width: 100%;
+	}
 }
 
 /* --- --- --- サジェスト --- ---- --- */
+.bl_suggest {
+	border: 1px solid #d4d9dc;
+}
 .bl_suggest_header {
 	font-size: 0.75em;
 	padding: .5em;
@@ -61,7 +87,59 @@ body {
 	margin-right: 1em;
 }
 
+@media screen and (max-width: 768px) {
+	.bl_suggest {
+		border: 0;
+	}
+	.bl_suggest_header {
+		display: none;
+	}
+	.bl_suggest_body {
+		display: flex;
+		justify-content: flex-start;
+		padding: .5em;
+		margin-bottom: 1px;
+	}
+	.bl_suggest_item {
+		padding: .4em;
+		border-radius: .25em;
+		margin-right: .5em;
+		border: 1px solid transparent;
+		background-color: #d4d9dc;
+	}
+	.bl_suggest_item:last-child {
+		border-bottom: 1px solid transparent;
+	}
+	.bl_suggest_item:focus,
+	.bl_suggest_item:hover {
+		background-color: #fff;
+		border-color: #d4d9dc;
+	}
+	.bl_suggest_label {
+		display: none;
+	}
+	.bl_suggest_keyword {
+		margin: 0;
+	}
+	.bl_suggest_body::-webkit-scrollbar{
+		width: 0;
+		height: .3em;
+	}
+	.bl_suggest_body::-webkit-scrollbar-track{
+		border-radius: .5em;
+		box-shadow: inset 0 0 2px #d4d9dc;
+	}
+	.bl_suggest_body::-webkit-scrollbar-thumb{
+		background: #d4d9dc;
+		border-radius: .5em;
+		box-shadow: none;
+	}
+}
+
 /* --- --- --- 検索履歴 --- ---- --- */
+.bl_history {
+	border: 1px solid #d4d9dc;
+}
 .bl_history_header {
 	font-size: 0.75em;
 	padding: .5em;
@@ -103,8 +181,16 @@ body {
 	margin-right: 1em;
 }
 
+@media screen and (max-width: 768px) {
+	.bl_history {
+		display: none;
+	}
+}
+
+
 /* --- --- --- ランキング --- --- --- */
 .bl_rank {
+	border: 1px solid #d4d9dc;
 	counter-reset: bl_rank 0; /* 変数名と初期値を定義 */
 }
 .bl_rank_header {
@@ -115,7 +201,7 @@ body {
 	color: #888;
 }
 .bl_rank_body {
-	/* height: calc(2em * 2); */
+	/* height: calc(2em * 3); */
 	padding: 0 .3em;
 	overflow-y: scroll;
 }
@@ -156,7 +242,127 @@ body {
 	content: counter(bl_rank) '.';
 }
 
+@media screen and (max-width: 768px) {
+	.bl_rank {
+		display: none;
+	}
+}
+
+/* --- --- --- サジェスト商品詳細 --- --- --- */
+.bl_suggestItem {
+	border: 1px solid #d4d9dc;
+}
+.bl_suggestItem_header {
+	font-size: 0.75em;
+	padding: .5em;
+	background-color: #d4d9dc;
+	color: #696969;
+}
+.bl_suggestItem_body {
+	padding: .5em;
+}
+@media screen and (min-width: 768px) {
+	.bl_suggestItem_item {
+		display: flex;
+		height: 6em;
+		margin-bottom: .5em;
+		box-shadow: 1px 1px 2px rgba(0,0,0,.16);
+	}
+	.bl_suggestItem_item:last-child {
+		margin-bottom: 0;
+	}
+	.bl_suggestItem_imgWrapper {
+		position: relative;
+		flex: 0 1 30%;
+		width: 100%;
+		height: 100%;
+		overflow-y: hidden;
+		margin-right: .5em;
+	}
+	.bl_suggestItem_imgWrapper > img {
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		transform: translateY(-50%);
+	}
+	.bl_suggestItem_itemBody {
+		flex: 1;
+		padding: .5em 1em;
+	}
+	.bl_suggestItem_ttl {
+		max-height: 3em;
+		overflow-y: scroll;
+		margin-bottom: .5em;
+		color: #696969;
+	}
+	.bl_suggestItem_price {
+		font-size: .8em;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.bl_suggestItem_body {
+		display: flex;
+		flex-wrap: nowrap;
+		overflow-x: scroll;
+		margin-bottom: 1px;
+	}
+	.bl_suggestItem_item {
+		display: block;
+		flex: 0 0 7em;
+		box-shadow: 1px 1px 2px rgba(0,0,0,.16);
+		overflow: hidden;
+		margin-right: .5em;
+	}
+	.bl_suggestItem_imgWrapper {
+		position: relative;
+		padding-top: 80%; /* widthに対しての割合 */
+		overflow: hidden;
+	}
+	.bl_suggestItem_imgWrapper > img {
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		transform: translateY(-50%);
+	}
+	.bl_suggestItem_itemBody {
+		padding: .5em .3em;
+	}
+	.bl_suggestItem_ttl {
+		font-size: .8em;
+		max-height: 4em;
+		overflow-y: scroll;
+		margin-bottom: 1em;
+		color: #696969;
+	}
+	.bl_suggestItem_price {
+		font-size: .6em;
+	}
+	.bl_card_body > *:last-child {
+		margin-bottom: 0;
+	}
+	.bl_suggestItem_body::-webkit-scrollbar{
+		width: 0;
+		height: .3em;
+	}
+	.bl_suggestItem_body::-webkit-scrollbar-track{
+		border-radius: .5em;
+		box-shadow: inset 0 0 2px #d4d9dc;
+	}
+	.bl_suggestItem_body::-webkit-scrollbar-thumb{
+		background: #d4d9dc;
+		border-radius: .5em;
+		box-shadow: none;
+	}
+}
 /* === === === エレメント === === === */
+
+/* --- --- --- 太字 --- --- --- */
+.el_bold {
+	display: inline-block;
+	font-weight: bold;
+	padding: 0 .3em;
+}
 
 /* --- --- --- hitnum --- --- --- */
 .el_hitnum {
@@ -171,15 +377,15 @@ body {
 	background-color: #d4d9dc;
 	border-radius: .3em;
 	color: #696969;
-	font-size: .7em;
+	font-size: .75em;
 }
 
 /* --- --- --- 削除ボタン --- --- --- */
 .el_crossBtn {
 	position: relative;
 	display: inline-block;
-	padding: .5em;
-	border-radius: .5em;
+	padding: .7em;
+	border-radius: .7em;
 	background-color: #d3d6dd;
 	color: #888;
 	cursor: pointer;
@@ -191,7 +397,7 @@ body {
 	top: 50%;
 	left: 50%;
 	display: block;
-	width: .6em;
+	width: .8em;
 	height: .1em;
 	background-color: currentColor;
 	transform: translate(-50%, -50%) rotate(45deg);
@@ -203,7 +409,7 @@ body {
 	left: 50%;
 	display: block;
 	width: .1em;
-	height: .6em;
+	height: .8em;
 	background-color: currentColor;
 	transform: translate(-50%, -50%) rotate(45deg);
 }
@@ -247,20 +453,20 @@ body {
 }
 
 /* --- --- --- 王冠マーク(シルバー) --- --- --- */
-.el_crownIcon__silver::before {
+.el_crownIcon.el_crownIcon__silver::before {
 	border-bottom-color: #ccc;
 }
-.el_crownIcon__silver::after {
+.el_crownIcon.el_crownIcon__silver::after {
 	border-color: #ccc;
 	border-top-color: transparent;
 	border-bottom-color: #aaa;
 }
 
 /* --- --- --- 王冠マーク(ブロンズ) --- --- --- */
-.el_crownIcon__bronze::before {
+.el_crownIcon.el_crownIcon__bronze::before {
 	border-bottom-color: #d98;
 }
-.el_crownIcon__bronze::after {
+.el_crownIcon.el_crownIcon__bronze::after {
 	border-color: #d98;
 	border-top-color: transparent;
 	border-bottom-color: #c76;
