@@ -1,6 +1,15 @@
+
 body {
 	padding: 50px;
 }
+
+/* === === === リセットスタイル === === === */
+.bl_suggestContainer a {
+	font-size: 14px;
+	color: #545454;
+	text-decoration: none;
+}
+
 /* === === === モジュール === === === */
 
 /* --- --- --- コンテナ --- --- --- */
