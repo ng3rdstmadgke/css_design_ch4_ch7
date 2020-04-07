@@ -281,6 +281,10 @@ body {
 	margin-right: .5em;
 	box-shadow: 1px 1px 2px rgba(0,0,0,.16);
 }
+.bl_suggestItem_item:focus,
+.bl_suggestItem_item:hover {
+	box-shadow: 3px 3px 2px rgba(0,0,0,.16);
+}
 .bl_suggestItem_body::-webkit-scrollbar{
 	width: 0;
 	height: .3em;
