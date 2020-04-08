@@ -65,6 +65,7 @@ body {
 	/* height: calc(2em * 2); */
 	padding: 0 .3em;
 	overflow-y: scroll;
+	-ms-overflow-style: none;
 }
 .bl_suggest_item {
 	display: flex;
@@ -92,6 +93,7 @@ body {
 	flex-grow: 1;
 	white-space: nowrap;
 	overflow-x: scroll;
+	-ms-overflow-style: none;
 	margin-right: 1em;
 }
 
@@ -158,6 +160,7 @@ body {
 	/* height: calc(2em * 2); */
 	padding: 0 .3em;
 	overflow-y: scroll;
+	-ms-overflow-style: none;
 }
 .bl_history_item {
 	display: flex;
@@ -185,6 +188,7 @@ body {
 	flex-grow: 1;
 	white-space: nowrap;
 	overflow-x: scroll;
+	-ms-overflow-style: none;
 	margin-right: 1em;
 }
 
@@ -210,6 +214,7 @@ body {
 	/* height: calc(2em * 3); */
 	padding: 0 .3em;
 	overflow-y: scroll;
+	-ms-overflow-style: none;
 }
 .bl_rank_item {
 	display: flex;
@@ -238,6 +243,7 @@ body {
 	display: block;
 	white-space: nowrap;
 	overflow-x: scroll;
+	-ms-overflow-style: none;
 	margin-right: 1em;
 }
 .bl_rankIcon {
@@ -277,6 +283,7 @@ body {
 	display: flex;
 	flex-wrap: nowrap;
 	overflow-x: scroll;
+	-ms-overflow-style: none;
 	margin-bottom: 1px;
 }
 .bl_suggestItem_item {
@@ -312,6 +319,7 @@ body {
 		display: block;
 		padding: .5em .5em 0 .5em;
 		overflow-y: scroll;
+		-ms-overflow-style: none;
 		max-height: 400px;
 		margin: 0px;
 		margin-right: 1px;
@@ -354,6 +362,7 @@ body {
 	.bl_media_ttl {
 		max-height: 3em;
 		overflow-y: scroll;
+		-ms-overflow-style: none;
 		margin-bottom: 1em;
 	}
 	.bl_media_price {
@@ -383,6 +392,7 @@ body {
 		font-size: .8em;
 		max-height: 3em;
 		overflow-y: scroll;
+		-ms-overflow-style: none;
 		margin-bottom: 1em;
 	}
 	.bl_media_price {
@@ -412,6 +422,7 @@ body {
 	font-size: .8em;
 	max-height: 3em;
 	overflow-y: scroll;
+	-ms-overflow-style: none;
 	margin-bottom: 1em;
 }
 .bl_card_price {
