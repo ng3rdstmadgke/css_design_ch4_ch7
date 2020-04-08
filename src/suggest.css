@@ -4,11 +4,16 @@ body {
 }
 
 /* === === === リセットスタイル === === === */
+.bl_suggestContainer * {
+	word-break: break-all; /* 文字の改行に関する禁則処理を解除してどこでも開業できるようにする */
+	word-wrap: break-word; /* 必要に応じて単語の途中で改行 */
+}
 .bl_suggestContainer a {
 	font-size: 14px;
 	color: #545454;
 	text-decoration: none;
 }
+
 
 /* === === === モジュール === === === */
 
@@ -64,8 +69,7 @@ body {
 .bl_suggest_body {
 	/* height: calc(2em * 2); */
 	padding: 0 .3em;
-	overflow-y: scroll;
-	-ms-overflow-style: none;
+	overflow-y: auto;
 }
 .bl_suggest_item {
 	display: flex;
@@ -92,8 +96,7 @@ body {
 	display: block;
 	flex-grow: 1;
 	white-space: nowrap;
-	overflow-x: scroll;
-	-ms-overflow-style: none;
+	overflow-x: auto;
 	margin-right: 1em;
 }
 
@@ -159,8 +162,7 @@ body {
 .bl_history_body {
 	/* height: calc(2em * 2); */
 	padding: 0 .3em;
-	overflow-y: scroll;
-	-ms-overflow-style: none;
+	overflow-y: auto;
 }
 .bl_history_item {
 	display: flex;
@@ -187,8 +189,7 @@ body {
 	display: block;
 	flex-grow: 1;
 	white-space: nowrap;
-	overflow-x: scroll;
-	-ms-overflow-style: none;
+	overflow-x: auto;
 	margin-right: 1em;
 }
 
@@ -213,8 +214,7 @@ body {
 .bl_rank_body {
 	/* height: calc(2em * 3); */
 	padding: 0 .3em;
-	overflow-y: scroll;
-	-ms-overflow-style: none;
+	overflow-y: auto;
 }
 .bl_rank_item {
 	display: flex;
@@ -242,8 +242,7 @@ body {
 	flex-grow: 1;
 	display: block;
 	white-space: nowrap;
-	overflow-x: scroll;
-	-ms-overflow-style: none;
+	overflow-x: auto;
 	margin-right: 1em;
 }
 .bl_rankIcon {
@@ -282,8 +281,7 @@ body {
 .bl_suggestItem_body {
 	display: flex;
 	flex-wrap: nowrap;
-	overflow-x: scroll;
-	-ms-overflow-style: none;
+	overflow-x: auto;
 	margin-bottom: 1px;
 }
 .bl_suggestItem_item {
@@ -318,8 +316,7 @@ body {
 	.bl_suggestItem__media .bl_suggestItem_body {
 		display: block;
 		padding: .5em .5em 0 .5em;
-		overflow-y: scroll;
-		-ms-overflow-style: none;
+		overflow-y: auto;
 		max-height: 400px;
 		margin: 0px;
 		margin-right: 1px;
@@ -361,8 +358,7 @@ body {
 	}
 	.bl_media_ttl {
 		max-height: 3em;
-		overflow-y: scroll;
-		-ms-overflow-style: none;
+		overflow-y: auto;
 		margin-bottom: 1em;
 	}
 	.bl_media_price {
@@ -391,8 +387,7 @@ body {
 	.bl_media_ttl {
 		font-size: .8em;
 		max-height: 3em;
-		overflow-y: scroll;
-		-ms-overflow-style: none;
+		overflow-y: auto;
 		margin-bottom: 1em;
 	}
 	.bl_media_price {
@@ -421,8 +416,7 @@ body {
 .bl_card_ttl {
 	font-size: .8em;
 	max-height: 3em;
-	overflow-y: scroll;
-	-ms-overflow-style: none;
+	overflow-y: auto;
 	margin-bottom: 1em;
 }
 .bl_card_price {
