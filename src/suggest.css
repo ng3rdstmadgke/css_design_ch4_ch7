@@ -7,7 +7,7 @@ body {
 .bl_suggestContainer * {
 	word-break: break-all; /* 文字の改行に関する禁則処理を解除してどこでも開業できるようにする */
 	word-wrap: break-word; /* 必要に応じて単語の途中で改行 */
-	-ms-overflow-style: none; /* IE, Edge でスクロールバーを表示しない */
+	-ms-overflow-style: none; /* IE でスクロールバーを表示しない */
 }
 .bl_suggestContainer *::-webkit-scrollbar{
 	width: 0;
