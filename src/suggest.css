@@ -4,16 +4,16 @@ body {
 }
 
 /* === === === リセットスタイル === === === */
-.bl_suggestContainer * {
+.bl_npSuggestContainer * {
 	word-break: break-all; /* 文字の改行に関する禁則処理を解除してどこでも開業できるようにする */
 	word-wrap: break-word; /* 必要に応じて単語の途中で改行 */
 	-ms-overflow-style: none; /* IE でスクロールバーを表示しない */
 }
-.bl_suggestContainer *::-webkit-scrollbar{
+.bl_npSuggestContainer *::-webkit-scrollbar{
 	width: 0;
 	height: 0;
  }
-.bl_suggestContainer a {
+.bl_npSuggestContainer a {
 	font-size: 14px;
 	color: #545454;
 	text-decoration: none;
@@ -23,7 +23,7 @@ body {
 /* === === === モジュール === === === */
 
 /* --- --- --- コンテナ --- --- --- */
-.bl_suggestContainer {
+.bl_npSuggestContainer {
 	display: flex;
 	flex-direction: row; /* 商品詳細を下にしたい場合は column, 左にしたい場合は row-reverse */
 	width: 700px;
@@ -38,45 +38,45 @@ body {
 	box-sizing: border-box;
 	margin-top: 1px;
 }
-.bl_suggestContainer_keyword {
+.bl_npSuggestContainer_keyword {
 	width: 50%;
 	margin: 0 1px;
 }
 
-.bl_suggestContainer_item {
+.bl_npSuggestContainer_item {
 	width: 50%;
 }
 
 @media screen and (max-width: 768px) {
-	.bl_suggestContainer {
+	.bl_npSuggestContainer {
 		flex-direction: column;
 		width: 100%; /* 本当は 100vw */
 	}
-	.bl_suggestContainer_keyword {
+	.bl_npSuggestContainer_keyword {
 		width: 100%;
 		margin: 0;
 	}
-	.bl_suggestContainer_item {
+	.bl_npSuggestContainer_item {
 		width: 100%;
 	}
 }
 
 /* --- --- --- サジェスト --- ---- --- */
-.bl_suggest {
+.bl_npSuggest {
 	border: 1px solid #d4d9dc;
 }
-.bl_suggest_header {
+.bl_npSuggest_header {
 	font-size: 0.75em;
 	padding: .5em;
 	background-color: #d4d9dc;
 	font-weight: bold;
 }
-.bl_suggest_body {
+.bl_npSuggest_body {
 	/* height: calc(2em * 2); */
 	padding: 0 .3em;
 	overflow-y: auto;
 }
-.bl_suggest_item {
+.bl_npSuggest_item {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -84,20 +84,20 @@ body {
 	padding: .4em;
 	cursor: pointer;
 }
-.bl_suggest_item:last-child {
+.bl_npSuggest_item:last-child {
 	border-bottom: 0;
 }
-.bl_suggest_item:focus,
-.bl_suggest_item:hover {
+.bl_npSuggest_item:focus,
+.bl_npSuggest_item:hover {
 	background-color: #f5f5f5;
 }
-.bl_suggest_label {
+.bl_npSuggest_label {
 	display: block;
 	flex-grow: 0;
 	flex-shrink: 0;
 	margin-right: .5em;
 }
-.bl_suggest_keyword {
+.bl_npSuggest_keyword {
 	display: block;
 	flex-grow: 1;
 	white-space: nowrap;
@@ -106,48 +106,48 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-	.bl_suggest {
+	.bl_npSuggest {
 		border: 0;
 		margin-bottom: 1px;
 	}
-	.bl_suggest_header {
+	.bl_npSuggest_header {
 		display: none;
 	}
-	.bl_suggest_body {
+	.bl_npSuggest_body {
 		display: flex;
 		justify-content: flex-start;
 		padding: .5em;
 	}
-	.bl_suggest_item {
+	.bl_npSuggest_item {
 		padding: .4em;
 		border-radius: .25em;
 		margin-right: .5em;
 		border: 1px solid transparent;
 		background-color: #d4d9dc;
 	}
-	.bl_suggest_item:last-child {
+	.bl_npSuggest_item:last-child {
 		border-bottom: 1px solid transparent;
 	}
-	.bl_suggest_item:focus,
-	.bl_suggest_item:hover {
+	.bl_npSuggest_item:focus,
+	.bl_npSuggest_item:hover {
 		background-color: #fff;
 		border-color: #d4d9dc;
 	}
-	.bl_suggest_label {
+	.bl_npSuggest_label {
 		display: none;
 	}
-	.bl_suggest_keyword {
+	.bl_npSuggest_keyword {
 		margin: 0;
 	}
-	.bl_suggest_body::-webkit-scrollbar{
+	.bl_npSuggest_body::-webkit-scrollbar{
 		width: 0;
 		height: .3em;
 	}
-	.bl_suggest_body::-webkit-scrollbar-track{
+	.bl_npSuggest_body::-webkit-scrollbar-track{
 		border-radius: .5em;
 		box-shadow: inset 0 0 2px #d4d9dc;
 	}
-	.bl_suggest_body::-webkit-scrollbar-thumb{
+	.bl_npSuggest_body::-webkit-scrollbar-thumb{
 		background: #666;
 		border-radius: .5em;
 		box-shadow: none;
@@ -265,51 +265,51 @@ body {
 }
 
 /* --- --- --- サジェスト商品詳細(カード) --- --- --- */
-.bl_suggestItem {
+.bl_npSuggestItem {
 	border: 1px solid #d4d9dc;
 }
-.bl_suggestItem_header {
+.bl_npSuggestItem_header {
 	font-size: 0.75em;
 	padding: .5em;
 	background-color: #d4d9dc;
 }
-.bl_suggestItem_header > span {
+.bl_npSuggestItem_header > span {
 	margin: 0 .3em;
 }
-.bl_suggestItem_body {
+.bl_npSuggestItem_body {
 	padding: .5em 0 .5em .5em;
 }
-.bl_suggestItem_body::after { /* スクロールの端はpaddingが効かないので、padding分の疑似要素を入れる */
+.bl_npSuggestItem_body::after { /* スクロールの端はpaddingが効かないので、padding分の疑似要素を入れる */
 	content: '';
 	padding: .25em;
 }
-.bl_suggestItem_body {
+.bl_npSuggestItem_body {
 	display: flex;
 	flex-wrap: nowrap;
 	overflow-x: auto;
 }
-.bl_suggestItem_item {
+.bl_npSuggestItem_item {
 	display: block;
 	flex: 0 0 7em;
 	margin: 0 .5em 0 0;
 	box-shadow: 1px 1px 2px 1px #d4d9dc;
 }
-.bl_suggestItem_item:last-child {
+.bl_npSuggestItem_item:last-child {
 	margin: 0;
 }
-.bl_suggestItem_item:focus,
-.bl_suggestItem_item:hover {
+.bl_npSuggestItem_item:focus,
+.bl_npSuggestItem_item:hover {
 	box-shadow: 2px 2px 3px 2px #d4d9dc;
 }
-.bl_suggestItem_body::-webkit-scrollbar{
+.bl_npSuggestItem_body::-webkit-scrollbar{
 	width: 0;
 	height: .3em;
 }
-.bl_suggestItem_body::-webkit-scrollbar-track{
+.bl_npSuggestItem_body::-webkit-scrollbar-track{
 	border-radius: .5em;
 	box-shadow: inset 0 0 2px #d4d9dc;
 }
-.bl_suggestItem_body::-webkit-scrollbar-thumb{
+.bl_npSuggestItem_body::-webkit-scrollbar-thumb{
 	background: #666;
 	border-radius: .5em;
 	box-shadow: none;
@@ -317,21 +317,21 @@ body {
 
 /* --- --- --- サジェスト商品詳細(メディア) --- --- --- */
 @media screen and (min-width: 768px) {
-	.bl_suggestItem__media .bl_suggestItem_body {
+	.bl_npSuggestItem__media .bl_npSuggestItem_body {
 		display: block;
 		padding: .5em .5em 0 .5em;
 		overflow-y: auto;
 		max-height: 400px;
 	}
-	.bl_suggestItem__media .bl_suggestItem_item {
+	.bl_npSuggestItem__media .bl_npSuggestItem_item {
 		display: flex;
 		height: 6em;
 		margin: 0 0 .5em 0;
 	}
-	.bl_suggestItem_item:last-child {
+	.bl_npSuggestItem_item:last-child {
 		margin: 0;
 	}
-	.bl_suggestItem__media .bl_suggestItem_body::-webkit-scrollbar{
+	.bl_npSuggestItem__media .bl_npSuggestItem_body::-webkit-scrollbar{
 			width: .3em;
 			height: 0;
 	}
