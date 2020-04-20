@@ -85,6 +85,9 @@ body {
 	background-color: #d4d9dc;
 	font-weight: bold;
 }
+.bl_npSuggestKeywordList_header::after {
+	content: 'サジェスト';
+}
 .bl_npSuggestKeywordList_body {
 	/* height: calc(2em * 2); */
 	padding: 0 .3em;
@@ -178,6 +181,9 @@ body {
 	background-color: #d4d9dc;
 	font-weight: bold;
 }
+.bl_npSuggestHistoryList_header::after {
+	content: '検索履歴'
+}
 .bl_npSuggestHistoryList_body {
 	/* height: calc(2em * 2); */
 	padding: 0 .3em;
@@ -229,6 +235,9 @@ body {
 	padding: .5em;
 	background-color: #d4d9dc;
 	font-weight: bold;
+}
+.bl_npSuggestRankingList_header::after {
+	content: 'ランキング';
 }
 .bl_npSuggestRankingList_body {
 	/* height: calc(2em * 3); */
