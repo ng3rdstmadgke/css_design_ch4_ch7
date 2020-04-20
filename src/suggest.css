@@ -1,6 +1,7 @@
 
 body {
 	padding: 50px;
+	background-color: #c76;
 }
 
 /* === === === リセットスタイル === === === */
@@ -24,7 +25,7 @@ body {
 
 /* --- --- --- コンテナ --- --- --- */
 .bl_npSuggestContainer {
-	/* position: absolute; */
+	position: absolute;
 	z-index: 1000;
 	top: 33px;
 	display: flex;
@@ -45,10 +46,12 @@ body {
 .bl_npSuggestContainer_searchboxComponent {
 	max-width: 50%;
 	margin: 0 1px;
+	background-color: #fff;
 }
 
 .bl_npSuggestContainer_eventComponent {
 	max-width: 50%;
+	background-color: #fff;
 }
 
 @media screen and (max-width: 768px) {
@@ -66,21 +69,21 @@ body {
 }
 
 /* --- --- --- サジェスト --- ---- --- */
-.bl_npSuggest {
+.bl_npSuggestKeywordList {
 	border: 1px solid #d4d9dc;
 }
-.bl_npSuggest_header {
+.bl_npSuggestKeywordList_header {
 	font-size: 0.75em;
 	padding: .5em;
 	background-color: #d4d9dc;
 	font-weight: bold;
 }
-.bl_npSuggest_body {
+.bl_npSuggestKeywordList_body {
 	/* height: calc(2em * 2); */
 	padding: 0 .3em;
 	overflow-y: auto;
 }
-.bl_npSuggest_item {
+.bl_npSuggestKeywordList_item {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -88,20 +91,20 @@ body {
 	padding: .4em;
 	cursor: pointer;
 }
-.bl_npSuggest_item:last-child {
+.bl_npSuggestKeywordList_item:last-child {
 	border-bottom: 0;
 }
-.bl_npSuggest_item:focus,
-.bl_npSuggest_item:hover {
+.bl_npSuggestKeywordList_item:focus,
+.bl_npSuggestKeywordList_item:hover {
 	background-color: #f5f5f5;
 }
-.bl_npSuggest_label {
+.bl_npSuggestKeywordList_label {
 	display: block;
 	flex-grow: 0;
 	flex-shrink: 0;
 	margin-right: .5em;
 }
-.bl_npSuggest_keyword {
+.bl_npSuggestKeywordList_keyword {
 	display: block;
 	flex-grow: 1;
 	white-space: nowrap;
@@ -110,48 +113,48 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-	.bl_npSuggest {
+	.bl_npSuggestKeywordList {
 		border: 0;
 		margin-bottom: 1px;
 	}
-	.bl_npSuggest_header {
+	.bl_npSuggestKeywordList_header {
 		display: none;
 	}
-	.bl_npSuggest_body {
+	.bl_npSuggestKeywordList_body {
 		display: flex;
 		justify-content: flex-start;
 		padding: .5em;
 	}
-	.bl_npSuggest_item {
+	.bl_npSuggestKeywordList_item {
 		padding: .4em;
 		border-radius: .25em;
 		margin-right: .5em;
 		border: 1px solid transparent;
 		background-color: #d4d9dc;
 	}
-	.bl_npSuggest_item:last-child {
+	.bl_npSuggestKeywordList_item:last-child {
 		border-bottom: 1px solid transparent;
 	}
-	.bl_npSuggest_item:focus,
-	.bl_npSuggest_item:hover {
+	.bl_npSuggestKeywordList_item:focus,
+	.bl_npSuggestKeywordList_item:hover {
 		background-color: #fff;
 		border-color: #d4d9dc;
 	}
-	.bl_npSuggest_label {
+	.bl_npSuggestKeywordList_label {
 		display: none;
 	}
-	.bl_npSuggest_keyword {
+	.bl_npSuggestKeywordList_keyword {
 		margin: 0;
 	}
-	.bl_npSuggest_body::-webkit-scrollbar{
+	.bl_npSuggestKeywordList_body::-webkit-scrollbar{
 		width: 0;
 		height: .3em;
 	}
-	.bl_npSuggest_body::-webkit-scrollbar-track{
+	.bl_npSuggestKeywordList_body::-webkit-scrollbar-track{
 		border-radius: .5em;
 		box-shadow: inset 0 0 2px #d4d9dc;
 	}
-	.bl_npSuggest_body::-webkit-scrollbar-thumb{
+	.bl_npSuggestKeywordList_body::-webkit-scrollbar-thumb{
 		background: #666;
 		border-radius: .5em;
 		box-shadow: none;
@@ -159,21 +162,21 @@ body {
 }
 
 /* --- --- --- 検索履歴 --- ---- --- */
-.bl_history {
+.bl_npSuggestHistoryList {
 	border: 1px solid #d4d9dc;
 }
-.bl_history_header {
+.bl_npSuggestHistoryList_header {
 	font-size: 0.75em;
 	padding: .5em;
 	background-color: #d4d9dc;
 	font-weight: bold;
 }
-.bl_history_body {
+.bl_npSuggestHistoryList_body {
 	/* height: calc(2em * 2); */
 	padding: 0 .3em;
 	overflow-y: auto;
 }
-.bl_history_item {
+.bl_npSuggestHistoryList_item {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -181,20 +184,20 @@ body {
 	padding: .4em;
 	cursor: pointer;
 }
-.bl_history_item:last-child {
+.bl_npSuggestHistoryList_item:last-child {
 	border-bottom: 0;
 }
-.bl_history_item:focus,
-.bl_history_item:hover {
+.bl_npSuggestHistoryList_item:focus,
+.bl_npSuggestHistoryList_item:hover {
 	background-color: #f5f5f5;
 }
-.bl_history_label {
+.bl_npSuggestHistoryList_label {
 	display: block;
 	flex-grow: 0;
 	flex-shrink: 0;
 	margin-right: .5em;
 }
-.bl_history_keyword {
+.bl_npSuggestHistoryList_keyword {
 	display: block;
 	flex-grow: 1;
 	white-space: nowrap;
@@ -203,117 +206,117 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-	.bl_history {
+	.bl_npSuggestHistoryList {
 		display: none;
 	}
 }
 
 
 /* --- --- --- ランキング --- --- --- */
-.bl_rank {
+.bl_npSuggestRankingList {
 	border: 1px solid #d4d9dc;
-	counter-reset: bl_rank 0; /* 変数名と初期値を定義 */
+	counter-reset: bl_npSuggestRankingList 0; /* 変数名と初期値を定義 */
 }
-.bl_rank_header {
+.bl_npSuggestRankingList_header {
 	font-size: 0.75em;
 	padding: .5em;
 	background-color: #d4d9dc;
 	font-weight: bold;
 }
-.bl_rank_body {
+.bl_npSuggestRankingList_body {
 	/* height: calc(2em * 3); */
 	padding: 0 .3em;
 	overflow-y: auto;
 }
-.bl_rank_item {
+.bl_npSuggestRankingList_item {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	border-bottom: 1px solid #d4d9dc;
 	padding: .4em;
 	cursor: pointer;
-	counter-increment: bl_rank; /* カウンタをインクリメント */
+	counter-increment: bl_npSuggestRankingList; /* カウンタをインクリメント */
 }
-.bl_rank_item:last-child {
+.bl_npSuggestRankingList_item:last-child {
 	border-bottom: 0;
 }
-.bl_rank_item:focus,
-.bl_rank_item:hover {
+.bl_npSuggestRankingList_item:focus,
+.bl_npSuggestRankingList_item:hover {
 	background-color: #f5f5f5;
 }
-.bl_rank_label {
+.bl_npSuggestRankingList_label {
 	display: block;
 	flex-grow: 0;
 	flex-shrink: 0;
 	margin-right: .5em;
 }
-.bl_rank_keyword {
+.bl_npSuggestRankingList_keyword {
 	flex-grow: 1;
 	display: block;
 	white-space: nowrap;
 	overflow-x: auto;
 	margin-right: 1em;
 }
-.bl_rankIcon {
+.bl_npSuggestRankingList_icon {
 	font-weight: bold;
 	color: #a9a9a9;
 }
-.bl_rankIcon::before {
-	content: counter(bl_rank) '.';
+.bl_npSuggestRankingList_icon::before {
+	content: counter(bl_npSuggestRankingList) '.';
 }
 
 @media screen and (max-width: 768px) {
-	.bl_rank {
+	.bl_npSuggestRankingList {
 		display: none;
 	}
 }
 
 /* --- --- --- サジェスト商品詳細(カード) --- --- --- */
-.bl_npSuggestItem {
+.bl_npSuggestItemList {
 	border: 1px solid #d4d9dc;
 }
-.bl_npSuggestItem_header {
+.bl_npSuggestItemList_header {
 	font-size: 0.75em;
 	padding: .5em;
 	background-color: #d4d9dc;
 }
-.bl_npSuggestItem_header > span {
+.bl_npSuggestItemList_header > span {
 	margin: 0 .3em;
 }
-.bl_npSuggestItem_body {
+.bl_npSuggestItemList_body {
 	padding: .5em 0 .5em .5em;
 }
-.bl_npSuggestItem_body::after { /* スクロールの端はpaddingが効かないので、padding分の疑似要素を入れる */
+.bl_npSuggestItemList_body::after { /* スクロールの端はpaddingが効かないので、padding分の疑似要素を入れる */
 	content: '';
 	padding: .25em;
 }
-.bl_npSuggestItem_body {
+.bl_npSuggestItemList_body {
 	display: flex;
 	flex-wrap: nowrap;
 	overflow-x: auto;
 }
-.bl_npSuggestItem_item {
+.bl_npSuggestItemList_item {
 	display: block;
 	flex: 0 0 7em;
 	margin: 0 .5em 0 0;
 	box-shadow: 1px 1px 2px 1px #d4d9dc;
 }
-.bl_npSuggestItem_item:last-child {
+.bl_npSuggestItemList_item:last-child {
 	margin: 0;
 }
-.bl_npSuggestItem_item:focus,
-.bl_npSuggestItem_item:hover {
+.bl_npSuggestItemList_item:focus,
+.bl_npSuggestItemList_item:hover {
 	box-shadow: 2px 2px 3px 2px #d4d9dc;
 }
-.bl_npSuggestItem_body::-webkit-scrollbar{
+.bl_npSuggestItemList_body::-webkit-scrollbar{
 	width: 0;
 	height: .3em;
 }
-.bl_npSuggestItem_body::-webkit-scrollbar-track{
+.bl_npSuggestItemList_body::-webkit-scrollbar-track{
 	border-radius: .5em;
 	box-shadow: inset 0 0 2px #d4d9dc;
 }
-.bl_npSuggestItem_body::-webkit-scrollbar-thumb{
+.bl_npSuggestItemList_body::-webkit-scrollbar-thumb{
 	background: #666;
 	border-radius: .5em;
 	box-shadow: none;
@@ -321,111 +324,115 @@ body {
 
 /* --- --- --- サジェスト商品詳細(メディア) --- --- --- */
 @media screen and (min-width: 768px) {
-	.bl_npSuggestItem__media .bl_npSuggestItem_body {
+	.bl_npSuggestItemList__media .bl_npSuggestItemList_body {
 		display: block;
 		padding: .5em .5em 0 .5em;
 		overflow-y: auto;
 		max-height: 400px;
 	}
-	.bl_npSuggestItem__media .bl_npSuggestItem_item {
+	.bl_npSuggestItemList__media .bl_npSuggestItemList_item {
 		display: flex;
 		height: 6em;
 		margin: 0 0 .5em 0;
 	}
-	.bl_npSuggestItem_item:last-child {
+	.bl_npSuggestItemList_item:last-child {
 		margin: 0;
 	}
-	.bl_npSuggestItem__media .bl_npSuggestItem_body::-webkit-scrollbar{
+	.bl_npSuggestItemList__media .bl_npSuggestItemList_body::-webkit-scrollbar{
 			width: .3em;
 			height: 0;
 	}
 }
 
 /* --- --- --- メディア --- --- --- */
+.bl_npSuggestMedia {
+	background-color: #fff;
+}
 @media screen and (min-width: 768px) {
-	.bl_media {
+	.bl_npSuggestMedia {
 		display: flex;
 		height: 6em;
 	}
-	.bl_media_imgWrapper {
+	.bl_npSuggestMedia_imgWrapper {
 		position: relative;
 		flex: 0 1 35%;
 		overflow-y: hidden;
 	}
-	.bl_media_imgWrapper > img {
+	.bl_npSuggestMedia_imgWrapper > img {
 		position: absolute;
 		width: 100%;
 		top: 50%;
 		transform: translateY(-50%);
 	}
-	.bl_media_body {
+	.bl_npSuggestMedia_body {
 		flex: 1;
 		padding: .5em;
 	}
-	.bl_media_ttl {
+	.bl_npSuggestMedia_ttl {
 		max-height: 3em;
 		overflow-y: auto;
 		margin-bottom: 1em;
 	}
-	.bl_media_price {
+	.bl_npSuggestMedia_price {
 		font-size: .8em;
 	}
 }
 
 @media screen and (max-width: 768px) {
-	.bl_media {
+	.bl_npSuggestMedia {
 		display: block;
 	}
-	.bl_media_imgWrapper {
+	.bl_npSuggestMedia_imgWrapper {
 		position: relative;
 		padding-top: 75%; /* widthに対しての割合 */
 		overflow: hidden;
 	}
-	.bl_media_imgWrapper > img {
+	.bl_npSuggestMedia_imgWrapper > img {
 		position: absolute;
 		width: 100%;
 		top: 50%;
 		transform: translateY(-50%);
 	}
-	.bl_media_body {
+	.bl_npSuggestMedia_body {
 		padding: .5em;
 	}
-	.bl_media_ttl {
+	.bl_npSuggestMedia_ttl {
 		font-size: .8em;
 		max-height: 3em;
 		overflow-y: auto;
 		margin-bottom: 1em;
 	}
-	.bl_media_price {
+	.bl_npSuggestMedia_price {
 		font-size: .6em;
 	}
 }
 
 /* --- --- --- カード --- --- --- */
-.bl_card {
+.bl_npSuggestCard {
 	display: block;
+	background-color: #fff;
 }
-.bl_card_imgWrapper {
+.bl_npSuggestCard_imgWrapper {
 	position: relative;
 	padding-top: 75%; /* widthに対しての割合 */
 	overflow: hidden;
 }
-.bl_card_imgWrapper > img {
+.bl_npSuggestCard_imgWrapper > img {
 	position: absolute;
 	width: 100%;
 	top: 50%;
 	transform: translateY(-50%);
 }
-.bl_card_body {
+.bl_npSuggestCard_body {
 	padding: .5em;
 }
-.bl_card_ttl {
+.bl_npSuggestCard_ttl {
 	font-size: .8em;
 	max-height: 3em;
 	overflow-y: auto;
 	margin-bottom: 1em;
 }
-.bl_card_price {
+.bl_npSuggestCard_price {
 	font-size: .6em;
 }
 
@@ -438,13 +445,13 @@ body {
 }
 
 /* -- --- --- hitnum --- --- --- */
-.el_hitnum {
+.el_npSuggestHitnumLabel {
 	font-size: .75em;
 	color: #666;
 }
 
 /* --- --- --- ラベル --- --- --- */
-.el_label {
+.el_npSuggestCategoryLabel {
 	display: inline-block;
 	padding: .3em .7em;
 	background-color: #d4d9dc;
@@ -454,7 +461,7 @@ body {
 }
 
 /* --- --- --- 削除ボタン --- --- --- */
-.el_crossBtn {
+.el_npSuggestCrossBtn {
 	position: relative;
 	display: inline-block;
 	padding: .7em;
@@ -464,7 +471,7 @@ body {
 	cursor: pointer;
 	transition: .25s;
 }
-.el_crossBtn::before {
+.el_npSuggestCrossBtn::before {
 	content: '';
 	position: absolute;
 	top: 50%;
@@ -475,7 +482,7 @@ body {
 	background-color: currentColor;
 	transform: translate(-50%, -50%) rotate(45deg);
 }
-.el_crossBtn::after {
+.el_npSuggestCrossBtn::after {
 	content: '';
 	position: absolute;
 	top: 50%;
@@ -486,19 +493,19 @@ body {
 	background-color: currentColor;
 	transform: translate(-50%, -50%) rotate(45deg);
 }
-.el_crossBtn:focus,
-.el_crossBtn:hover {
+.el_npSuggestCrossBtn:focus,
+.el_npSuggestCrossBtn:hover {
 	background-color: #ff4500;
 	color: #fff;
 }
 
 /* --- --- --- 王冠マーク --- --- --- */
-.el_crownIcon {
+.el_npSuggestCrownIcon {
 	display: inline-block;
 	position: relative;
 	padding: .5em;
 }
-.el_crownIcon::before {
+.el_npSuggestCrownIcon::before {
 	content: '';
 	position: absolute;
 	left: 50%;
@@ -511,7 +518,7 @@ body {
 	border-left: .5em solid transparent;
 	transform: translateX(-50%);
 }
-.el_crownIcon::after {
+.el_npSuggestCrownIcon::after {
 	content: '';
 	position: absolute;
 	left: 50%;
@@ -526,20 +533,20 @@ body {
 }
 
 /* --- --- --- 王冠マーク(シルバー) --- --- --- */
-.el_crownIcon.el_crownIcon__silver::before {
+.el_npSuggestCrownIcon.el_npSuggestCrownIcon__silver::before {
 	border-bottom-color: #ccc;
 }
-.el_crownIcon.el_crownIcon__silver::after {
+.el_npSuggestCrownIcon.el_npSuggestCrownIcon__silver::after {
 	border-color: #ccc;
 	border-top-color: transparent;
 	border-bottom-color: #aaa;
 }
 
 /* --- --- --- 王冠マーク(ブロンズ) --- --- --- */
-.el_crownIcon.el_crownIcon__bronze::before {
+.el_npSuggestCrownIcon.el_npSuggestCrownIcon__bronze::before {
 	border-bottom-color: #d98;
 }
-.el_crownIcon.el_crownIcon__bronze::after {
+.el_npSuggestCrownIcon.el_npSuggestCrownIcon__bronze::after {
 	border-color: #d98;
 	border-top-color: transparent;
 	border-bottom-color: #c76;

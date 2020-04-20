@@ -8,73 +8,75 @@
 	<title>Document</title>
 </head>
 <body>
-	<div class="bl_npSuggestContainer" style="margin-bottom: 50px;">
+	<!-- 1個目のサジェスト要素 -->
+	<div style="position: relative; padding-top: 500px;">
+	<div class="bl_npSuggestContainer">
 		<!-- サジェストのキーワード部分 -->
 		<div class="bl_npSuggestContainer_searchboxComponent">
 			<!-- サジェスト -->
-			<div class="bl_npSuggest">
-				<div class="bl_npSuggest_header">サジェスト</div>
-				<div class="bl_npSuggest_body">
-					<div class="bl_npSuggest_item">
-						<div class="bl_npSuggest_label"><span class="el_label">商品名</span></div>
-						<div class="bl_npSuggest_keyword">トレーナー</div>
-						<div class="bl_npSuggest_label"><span class="el_hitnum">120件</span></div>
+			<div class="bl_npSuggestKeywordList">
+				<div class="bl_npSuggestKeywordList_header">サジェスト</div>
+				<div class="bl_npSuggestKeywordList_body">
+					<div class="bl_npSuggestKeywordList_item">
+						<div class="bl_npSuggestKeywordList_label"><span class="el_npSuggestCategoryLabel">商品名</span></div>
+						<div class="bl_npSuggestKeywordList_keyword">トレーナー</div>
+						<div class="bl_npSuggestKeywordList_label"><span class="el_npSuggestHitnumLabel">120件</span></div>
 					</div>
-					<div class="bl_npSuggest_item">
-						<div class="bl_npSuggest_label"><span class="el_label">商品名</span></div>
-						<div class="bl_npSuggest_keyword">トレーナー</div>
-						<div class="bl_npSuggest_label"><span class="el_hitnum">120件</span></div>
+					<div class="bl_npSuggestKeywordList_item">
+						<div class="bl_npSuggestKeywordList_label"><span class="el_npSuggestCategoryLabel">商品名</span></div>
+						<div class="bl_npSuggestKeywordList_keyword">トレーナー</div>
+						<div class="bl_npSuggestKeywordList_label"><span class="el_npSuggestHitnumLabel">120件</span></div>
 					</div>
-					<div class="bl_npSuggest_item">
-						<div class="bl_npSuggest_label"><span class="el_label">カテゴリ</span></div>
-						<div class="bl_npSuggest_keyword">トレーナートレーナートレーナートレーナートレーナートレーナートレーナートレーナートレーナー</div>
-						<div class="bl_npSuggest_label"><span class="el_hitnum">120件</span></div>
+					<div class="bl_npSuggestKeywordList_item">
+						<div class="bl_npSuggestKeywordList_label"><span class="el_npSuggestCategoryLabel">カテゴリ</span></div>
+						<div class="bl_npSuggestKeywordList_keyword">トレーナートレーナートレーナートレーナートレーナートレーナートレーナートレーナートレーナー</div>
+						<div class="bl_npSuggestKeywordList_label"><span class="el_npSuggestHitnumLabel">120件</span></div>
 					</div>
 				</div>
 			</div>
 			<!-- /サジェスト -->
 			<!-- 検索履歴 -->
-			<div class="bl_history">
-				<div class="bl_history_header">検索履歴</div>
-				<div class="bl_history_body">
-					<div class="bl_history_item">
-						<div class="bl_history_keyword">りれき1</div>
-						<div class="bl_history_label"><span class="el_crossBtn"></span></div>
+			<div class="bl_npSuggestHistoryList">
+				<div class="bl_npSuggestHistoryList_header">検索履歴</div>
+				<div class="bl_npSuggestHistoryList_body">
+					<div class="bl_npSuggestHistoryList_item">
+						<div class="bl_npSuggestHistoryList_keyword">りれき1</div>
+						<div class="bl_npSuggestHistoryList_label"><span class="el_npSuggestCrossBtn"></span></div>
 					</div>
-					<div class="bl_history_item">
-						<div class="bl_history_keyword">りれき2</div>
-						<div class="bl_history_label"><span class="el_crossBtn"></span></div>
+					<div class="bl_npSuggestHistoryList_item">
+						<div class="bl_npSuggestHistoryList_keyword">りれき2</div>
+						<div class="bl_npSuggestHistoryList_label"><span class="el_npSuggestCrossBtn"></span></div>
 					</div>
-					<div class="bl_history_item">
-						<div class="bl_history_keyword">長ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーいりれき3</div>
-						<div class="bl_history_label"><span class="el_crossBtn"></span></div>
+					<div class="bl_npSuggestHistoryList_item">
+						<div class="bl_npSuggestHistoryList_keyword">長ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーいりれき3</div>
+						<div class="bl_npSuggestHistoryList_label"><span class="el_npSuggestCrossBtn"></span></div>
 					</div>
 				</div>
 			</div>
 			<!-- /検索履歴 -->
 			<!-- ランキング -->
-			<div class="bl_rank">
-				<div class="bl_rank_header">ランキング</div>
-				<div class="bl_rank_body">
-					<div class="bl_rank_item">
-						<div class="bl_rank_label"><span class="el_crownIcon"></span></div>
-						<div class="bl_rank_keyword">ランキング1</div>
+			<div class="bl_npSuggestRankingList">
+				<div class="bl_npSuggestRankingList_header">ランキング</div>
+				<div class="bl_npSuggestRankingList_body">
+					<div class="bl_npSuggestRankingList_item">
+						<div class="bl_npSuggestRankingList_label"><span class="el_npSuggestCrownIcon"></span></div>
+						<div class="bl_npSuggestRankingList_keyword">ランキング1</div>
 					</div>
-					<div class="bl_rank_item">
-						<div class="bl_rank_label"><span class="el_crownIcon el_crownIcon__silver"></span></div>
-						<div class="bl_rank_keyword">ランキング2</div>
+					<div class="bl_npSuggestRankingList_item">
+						<div class="bl_npSuggestRankingList_label"><span class="el_npSuggestCrownIcon el_npSuggestCrownIcon__silver"></span></div>
+						<div class="bl_npSuggestRankingList_keyword">ランキング2</div>
 					</div>
-					<div class="bl_rank_item">
-						<div class="bl_rank_label"><span class="el_crownIcon el_crownIcon__bronze"></span></div>
-						<div class="bl_rank_keyword">ランキング3</div>
+					<div class="bl_npSuggestRankingList_item">
+						<div class="bl_npSuggestRankingList_label"><span class="el_npSuggestCrownIcon el_npSuggestCrownIcon__bronze"></span></div>
+						<div class="bl_npSuggestRankingList_keyword">ランキング3</div>
 					</div>
-					<div class="bl_rank_item">
-						<div class="bl_rank_label"><span class="bl_rankIcon"></span></div>
-						<div class="bl_rank_keyword">長ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーいランキング4</div>
+					<div class="bl_npSuggestRankingList_item">
+						<div class="bl_npSuggestRankingList_label"><span class="bl_npSuggestRankingList_icon"></span></div>
+						<div class="bl_npSuggestRankingList_keyword">長ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーいランキング4</div>
 					</div>
-					<div class="bl_rank_item">
-						<div class="bl_rank_label"><span class="bl_rankIcon"></span></div>
-						<div class="bl_rank_keyword">ランキング5</div>
+					<div class="bl_npSuggestRankingList_item">
+						<div class="bl_npSuggestRankingList_label"><span class="bl_npSuggestRankingList_icon"></span></div>
+						<div class="bl_npSuggestRankingList_keyword">ランキング5</div>
 					</div>
 				</div>
 			</div>
@@ -84,51 +86,51 @@
 		<!-- サジェストの商品詳細部分 -->
 		<div class="bl_npSuggestContainer_eventComponent">
 			<div class="bl_npSuggestContainer_eventComponentInner0">
-				<div class="bl_npSuggestItem bl_npSuggestItem__media">
-					<div class="bl_npSuggestItem_header">
+				<div class="bl_npSuggestItemList bl_npSuggestItemList__media">
+					<div class="bl_npSuggestItemList_header">
 						<span class="el_bold">サジェストキーワード</span>での検索結果(<span class="el_bold">33件</span>)
 					</div>
-					<div class="bl_npSuggestItem_body">
-						<a href="#" class="bl_npSuggestItem_item bl_media">
-							<div class="bl_media_imgWrapper"><img src="./sample_1.jpg" alt="photo"></div>
-							<div class="bl_media_body">
-								<div class="bl_media_ttl">タイトル</div>
-								<div class="bl_media_price">￥ 1,000円 (税込み)</div>
+					<div class="bl_npSuggestItemList_body">
+						<a href="#" class="bl_npSuggestItemList_item bl_npSuggestMedia">
+							<div class="bl_npSuggestMedia_imgWrapper"><img src="./sample_1.jpg" alt="photo"></div>
+							<div class="bl_npSuggestMedia_body">
+								<div class="bl_npSuggestMedia_ttl">タイトル</div>
+								<div class="bl_npSuggestMedia_price">￥ 1,000円 (税込み)</div>
 							</div>
 						</a>
-						<a href="#" class="bl_npSuggestItem_item bl_media">
-							<div class="bl_media_imgWrapper"><img src="./portrait.jpg" alt="photo"></div>
-							<div class="bl_media_body">
-								<div class="bl_media_ttl">タイトルタイトルタイトルタイトル</div>
-								<div class="bl_media_price">￥ 1,000円 (税込み)</div>
+						<a href="#" class="bl_npSuggestItemList_item bl_npSuggestMedia">
+							<div class="bl_npSuggestMedia_imgWrapper"><img src="./portrait.jpg" alt="photo"></div>
+							<div class="bl_npSuggestMedia_body">
+								<div class="bl_npSuggestMedia_ttl">タイトルタイトルタイトルタイトル</div>
+								<div class="bl_npSuggestMedia_price">￥ 1,000円 (税込み)</div>
 							</div>
 						</a>
-						<a href="#" class="bl_npSuggestItem_item bl_media">
-							<div class="bl_media_imgWrapper"><img src="./landscape.jpg" alt="photo"></div>
-							<div class="bl_media_body">
-								<div class="bl_media_ttl">タイトルタイトルタイトルタイトル</div>
-								<div class="bl_media_price">￥ 1,000円 (税込み)</div>
+						<a href="#" class="bl_npSuggestItemList_item bl_npSuggestMedia">
+							<div class="bl_npSuggestMedia_imgWrapper"><img src="./landscape.jpg" alt="photo"></div>
+							<div class="bl_npSuggestMedia_body">
+								<div class="bl_npSuggestMedia_ttl">タイトルタイトルタイトルタイトル</div>
+								<div class="bl_npSuggestMedia_price">￥ 1,000円 (税込み)</div>
 							</div>
 						</a>
-						<a href="#" class="bl_npSuggestItem_item bl_media">
-							<div class="bl_media_imgWrapper"><img src="./sample_1.jpg" alt="photo"></div>
-							<div class="bl_media_body">
-								<div class="bl_media_ttl">長ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーいタイトル</div>
-								<div class="bl_media_price">￥ 1,000円 (税込み)</div>
+						<a href="#" class="bl_npSuggestItemList_item bl_npSuggestMedia">
+							<div class="bl_npSuggestMedia_imgWrapper"><img src="./sample_1.jpg" alt="photo"></div>
+							<div class="bl_npSuggestMedia_body">
+								<div class="bl_npSuggestMedia_ttl">長ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーいタイトル</div>
+								<div class="bl_npSuggestMedia_price">￥ 1,000円 (税込み)</div>
 							</div>
 						</a>
-						<a href="#" class="bl_npSuggestItem_item bl_media">
-							<div class="bl_media_imgWrapper"><img src="./portrait.jpg" alt="photo"></div>
-							<div class="bl_media_body">
-								<div class="bl_media_ttl">タイトルタイトルタイトルタイトル</div>
-								<div class="bl_media_price">￥ 1,000円 (税込み)</div>
+						<a href="#" class="bl_npSuggestItemList_item bl_npSuggestMedia">
+							<div class="bl_npSuggestMedia_imgWrapper"><img src="./portrait.jpg" alt="photo"></div>
+							<div class="bl_npSuggestMedia_body">
+								<div class="bl_npSuggestMedia_ttl">タイトルタイトルタイトルタイトル</div>
+								<div class="bl_npSuggestMedia_price">￥ 1,000円 (税込み)</div>
 							</div>
 						</a>
-						<a href="#" class="bl_npSuggestItem_item bl_media">
-							<div class="bl_media_imgWrapper"><img src="./landscape.jpg" alt="photo"></div>
-							<div class="bl_media_body">
-								<div class="bl_media_ttl">タイトルタイトルタイトルタイトル</div>
-								<div class="bl_media_price">￥ 1,000円 (税込み)</div>
+						<a href="#" class="bl_npSuggestItemList_item bl_npSuggestMedia">
+							<div class="bl_npSuggestMedia_imgWrapper"><img src="./landscape.jpg" alt="photo"></div>
+							<div class="bl_npSuggestMedia_body">
+								<div class="bl_npSuggestMedia_ttl">タイトルタイトルタイトルタイトル</div>
+								<div class="bl_npSuggestMedia_price">￥ 1,000円 (税込み)</div>
 							</div>
 						</a>
 					</div>
@@ -137,80 +139,84 @@
 		</div>
 		<!-- /サジェストの商品詳細部分 -->
 	</div>
+	</div>
+	<!-- /1個目のサジェスト要素 -->
+	<!-- 2個目のサジェスト要素 -->
+	<div style="position: relative; padding-top: 500px;">
 	<div class="bl_npSuggestContainer" style="margin-bottom: 50px">
 		<!-- サジェストのキーワード部分 -->
 		<div class="bl_npSuggestContainer_searchboxComponent">
 			<!-- サジェスト -->
-			<div class="bl_npSuggest">
-				<div class="bl_npSuggest_body">
-					<div class="bl_npSuggest_item">
-						<div class="bl_npSuggest_label"><span class="el_label">商品名</span></div>
-						<div class="bl_npSuggest_keyword">トレーナー</div>
-						<div class="bl_npSuggest_label"><span class="el_hitnum">120件</span></div>
+			<div class="bl_npSuggestKeywordList">
+				<div class="bl_npSuggestKeywordList_body">
+					<div class="bl_npSuggestKeywordList_item">
+						<div class="bl_npSuggestKeywordList_label"><span class="el_npSuggestCategoryLabel">商品名</span></div>
+						<div class="bl_npSuggestKeywordList_keyword">トレーナー</div>
+						<div class="bl_npSuggestKeywordList_label"><span class="el_npSuggestHitnumLabel">120件</span></div>
 					</div>
-					<div class="bl_npSuggest_item">
-						<div class="bl_npSuggest_label"><span class="el_label">商品名</span></div>
-						<div class="bl_npSuggest_keyword">トレーナー</div>
-						<div class="bl_npSuggest_label"><span class="el_hitnum">120件</span></div>
+					<div class="bl_npSuggestKeywordList_item">
+						<div class="bl_npSuggestKeywordList_label"><span class="el_npSuggestCategoryLabel">商品名</span></div>
+						<div class="bl_npSuggestKeywordList_keyword">トレーナー</div>
+						<div class="bl_npSuggestKeywordList_label"><span class="el_npSuggestHitnumLabel">120件</span></div>
 					</div>
-					<div class="bl_npSuggest_item">
-						<div class="bl_npSuggest_label"><span class="el_label">カテゴリ</span></div>
-						<div class="bl_npSuggest_keyword">トレーナー</div>
-						<div class="bl_npSuggest_label"><span class="el_hitnum">120件</span></div>
+					<div class="bl_npSuggestKeywordList_item">
+						<div class="bl_npSuggestKeywordList_label"><span class="el_npSuggestCategoryLabel">カテゴリ</span></div>
+						<div class="bl_npSuggestKeywordList_keyword">トレーナー</div>
+						<div class="bl_npSuggestKeywordList_label"><span class="el_npSuggestHitnumLabel">120件</span></div>
 					</div>
-					<div class="bl_npSuggest_item">
-						<div class="bl_npSuggest_label"><span class="el_label">カテゴリ</span></div>
-						<div class="bl_npSuggest_keyword">スカート</div>
-						<div class="bl_npSuggest_label"><span class="el_hitnum">120件</span></div>
+					<div class="bl_npSuggestKeywordList_item">
+						<div class="bl_npSuggestKeywordList_label"><span class="el_npSuggestCategoryLabel">カテゴリ</span></div>
+						<div class="bl_npSuggestKeywordList_keyword">スカート</div>
+						<div class="bl_npSuggestKeywordList_label"><span class="el_npSuggestHitnumLabel">120件</span></div>
 					</div>
-					<div class="bl_npSuggest_item">
-						<div class="bl_npSuggest_label"><span class="el_label">カテゴリ</span></div>
-						<div class="bl_npSuggest_keyword">スカート</div>
-						<div class="bl_npSuggest_label"><span class="el_hitnum">120件</span></div>
+					<div class="bl_npSuggestKeywordList_item">
+						<div class="bl_npSuggestKeywordList_label"><span class="el_npSuggestCategoryLabel">カテゴリ</span></div>
+						<div class="bl_npSuggestKeywordList_keyword">スカート</div>
+						<div class="bl_npSuggestKeywordList_label"><span class="el_npSuggestHitnumLabel">120件</span></div>
 					</div>
 				</div>
 			</div>
 			<!-- /サジェスト -->
 			<!-- 検索履歴 -->
-			<div class="bl_history">
-				<div class="bl_history_body">
-					<div class="bl_history_item">
-						<div class="bl_history_keyword">りれき1</div>
-						<div class="bl_history_label"><span class="el_crossBtn"></span></div>
+			<div class="bl_npSuggestHistoryList">
+				<div class="bl_npSuggestHistoryList_body">
+					<div class="bl_npSuggestHistoryList_item">
+						<div class="bl_npSuggestHistoryList_keyword">りれき1</div>
+						<div class="bl_npSuggestHistoryList_label"><span class="el_npSuggestCrossBtn"></span></div>
 					</div>
-					<div class="bl_history_item">
-						<div class="bl_history_keyword">りれき2</div>
-						<div class="bl_history_label"><span class="el_crossBtn"></span></div>
+					<div class="bl_npSuggestHistoryList_item">
+						<div class="bl_npSuggestHistoryList_keyword">りれき2</div>
+						<div class="bl_npSuggestHistoryList_label"><span class="el_npSuggestCrossBtn"></span></div>
 					</div>
-					<div class="bl_history_item">
-						<div class="bl_history_keyword">長ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーいりれき3</div>
-						<div class="bl_history_label"><span class="el_crossBtn"></span></div>
+					<div class="bl_npSuggestHistoryList_item">
+						<div class="bl_npSuggestHistoryList_keyword">長ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーいりれき3</div>
+						<div class="bl_npSuggestHistoryList_label"><span class="el_npSuggestCrossBtn"></span></div>
 					</div>
 				</div>
 			</div>
 			<!-- /検索履歴 -->
 			<!-- ランキング -->
-			<div class="bl_rank">
-				<div class="bl_rank_body">
-					<div class="bl_rank_item">
-						<div class="bl_rank_label"><span class="el_crownIcon"></span></div>
-						<div class="bl_rank_keyword">ランキング1</div>
+			<div class="bl_npSuggestRankingList">
+				<div class="bl_npSuggestRankingList_body">
+					<div class="bl_npSuggestRankingList_item">
+						<div class="bl_npSuggestRankingList_label"><span class="el_npSuggestCrownIcon"></span></div>
+						<div class="bl_npSuggestRankingList_keyword">ランキング1</div>
 					</div>
-					<div class="bl_rank_item">
-						<div class="bl_rank_label"><span class="el_crownIcon el_crownIcon__silver"></span></div>
-						<div class="bl_rank_keyword">ランキング2</div>
+					<div class="bl_npSuggestRankingList_item">
+						<div class="bl_npSuggestRankingList_label"><span class="el_npSuggestCrownIcon el_npSuggestCrownIcon__silver"></span></div>
+						<div class="bl_npSuggestRankingList_keyword">ランキング2</div>
 					</div>
-					<div class="bl_rank_item">
-						<div class="bl_rank_label"><span class="el_crownIcon el_crownIcon__bronze"></span></div>
-						<div class="bl_rank_keyword">ランキング3</div>
+					<div class="bl_npSuggestRankingList_item">
+						<div class="bl_npSuggestRankingList_label"><span class="el_npSuggestCrownIcon el_npSuggestCrownIcon__bronze"></span></div>
+						<div class="bl_npSuggestRankingList_keyword">ランキング3</div>
 					</div>
-					<div class="bl_rank_item">
-						<div class="bl_rank_label"><span class="bl_rankIcon"></span></div>
-						<div class="bl_rank_keyword">長ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーいランキング4</div>
+					<div class="bl_npSuggestRankingList_item">
+						<div class="bl_npSuggestRankingList_label"><span class="bl_npSuggestRankingListIcon"></span></div>
+						<div class="bl_npSuggestRankingList_keyword">長ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーいランキング4</div>
 					</div>
-					<div class="bl_rank_item">
-						<div class="bl_rank_label"><span class="bl_rankIcon"></span></div>
-						<div class="bl_rank_keyword">ランキング5</div>
+					<div class="bl_npSuggestRankingList_item">
+						<div class="bl_npSuggestRankingList_label"><span class="bl_npSuggestRankingListIcon"></span></div>
+						<div class="bl_npSuggestRankingList_keyword">ランキング5</div>
 					</div>
 				</div>
 			</div>
@@ -221,51 +227,51 @@
 		<div class="bl_npSuggestContainer_eventComponent" style="margin-bottom: 50px">
 			<div class="bl_npSuggestContainer_eventComponentInner0">
 				<!-- サジェスト商品詳細 -->
-				<div class="bl_npSuggestItem">
-					<div class="bl_npSuggestItem_header">
+				<div class="bl_npSuggestItemList">
+					<div class="bl_npSuggestItemList_header">
 						<span class="el_bold">サジェストキーワード</span>での検索結果(<span class="el_bold">33件</span>)
 					</div>
-					<div class="bl_npSuggestItem_body">
-						<a href="#" class="bl_npSuggestItem_item bl_card">
-							<div class="bl_card_imgWrapper"><img src="./sample_1.jpg" alt="photo"></div>
-							<div class="bl_card_body">
-								<div class="bl_card_ttl">タイトル</div>
-								<div class="bl_card_price">￥ 1,000円 (税込み)</div>
+					<div class="bl_npSuggestItemList_body">
+						<a href="#" class="bl_npSuggestItemList_item bl_npSuggestCard">
+							<div class="bl_npSuggestCard_imgWrapper"><img src="./sample_1.jpg" alt="photo"></div>
+							<div class="bl_npSuggestCard_body">
+								<div class="bl_npSuggestCard_ttl">タイトル</div>
+								<div class="bl_npSuggestCard_price">￥ 1,000円 (税込み)</div>
 							</div>
 						</a>
-						<a href="#" class="bl_npSuggestItem_item bl_card">
-							<div class="bl_card_imgWrapper"><img src="./portrait.jpg" alt="photo"></div>
-							<div class="bl_card_body">
-								<div class="bl_card_ttl">タイトルタイトルタイトルタイトル</div>
-								<div class="bl_card_price">￥ 1,000円 (税込み)</div>
+						<a href="#" class="bl_npSuggestItemList_item bl_npSuggestCard">
+							<div class="bl_npSuggestCard_imgWrapper"><img src="./portrait.jpg" alt="photo"></div>
+							<div class="bl_npSuggestCard_body">
+								<div class="bl_npSuggestCard_ttl">タイトルタイトルタイトルタイトル</div>
+								<div class="bl_npSuggestCard_price">￥ 1,000円 (税込み)</div>
 							</div>
 						</a>
-						<a href="#" class="bl_npSuggestItem_item bl_card">
-							<div class="bl_card_imgWrapper"><img src="./landscape.jpg" alt="photo"></div>
-							<div class="bl_card_body">
-								<div class="bl_card_ttl">タイトルタイトルタイトルタイトル</div>
-								<div class="bl_card_price">￥ 1,000円 (税込み)</div>
+						<a href="#" class="bl_npSuggestItemList_item bl_npSuggestCard">
+							<div class="bl_npSuggestCard_imgWrapper"><img src="./landscape.jpg" alt="photo"></div>
+							<div class="bl_npSuggestCard_body">
+								<div class="bl_npSuggestCard_ttl">タイトルタイトルタイトルタイトル</div>
+								<div class="bl_npSuggestCard_price">￥ 1,000円 (税込み)</div>
 							</div>
 						</a>
-						<a href="#" class="bl_npSuggestItem_item bl_card">
-							<div class="bl_card_imgWrapper"><img src="./sample_1.jpg" alt="photo"></div>
-							<div class="bl_card_body">
-								<div class="bl_card_ttl">長ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーいタイトル</div>
-								<div class="bl_card_price">￥ 1,000円 (税込み)</div>
+						<a href="#" class="bl_npSuggestItemList_item bl_npSuggestCard">
+							<div class="bl_npSuggestCard_imgWrapper"><img src="./sample_1.jpg" alt="photo"></div>
+							<div class="bl_npSuggestCard_body">
+								<div class="bl_npSuggestCard_ttl">長ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーいタイトル</div>
+								<div class="bl_npSuggestCard_price">￥ 1,000円 (税込み)</div>
 							</div>
 						</a>
-						<a href="#" class="bl_npSuggestItem_item bl_card">
-							<div class="bl_card_imgWrapper"><img src="./sample_1.jpg" alt="photo"></div>
-							<div class="bl_card_body">
-								<div class="bl_card_ttl">長ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーいタイトル</div>
-								<div class="bl_card_price">￥ 1,000円 (税込み)</div>
+						<a href="#" class="bl_npSuggestItemList_item bl_npSuggestCard">
+							<div class="bl_npSuggestCard_imgWrapper"><img src="./sample_1.jpg" alt="photo"></div>
+							<div class="bl_npSuggestCard_body">
+								<div class="bl_npSuggestCard_ttl">長ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーいタイトル</div>
+								<div class="bl_npSuggestCard_price">￥ 1,000円 (税込み)</div>
 							</div>
 						</a>
-						<a href="#" class="bl_npSuggestItem_item bl_card">
-							<div class="bl_card_imgWrapper"><img src="./sample_1.jpg" alt="photo"></div>
-							<div class="bl_card_body">
-								<div class="bl_card_ttl">長ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーいタイトル</div>
-								<div class="bl_card_price">￥ 1,000円 (税込み)</div>
+						<a href="#" class="bl_npSuggestItemList_item bl_npSuggestCard">
+							<div class="bl_npSuggestCard_imgWrapper"><img src="./sample_1.jpg" alt="photo"></div>
+							<div class="bl_npSuggestCard_body">
+								<div class="bl_npSuggestCard_ttl">長ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーいタイトル</div>
+								<div class="bl_npSuggestCard_price">￥ 1,000円 (税込み)</div>
 							</div>
 						</div>
 					</a>
@@ -274,49 +280,49 @@
 			</div>
 			<div class="bl_npSuggestContainer_eventComponentInner1">
 				<!-- レコメンドアイテム -->
-				<div class="bl_npSuggestItem">
-					<div class="bl_npSuggestItem_header"><span class="el_bold">レコメンドアイテム</span></div>
-					<div class="bl_npSuggestItem_body">
-						<a href="#" class="bl_npSuggestItem_item bl_card">
-							<div class="bl_card_imgWrapper"><img src="./sample_1.jpg" alt="photo"></div>
-							<div class="bl_card_body">
-								<div class="bl_card_ttl">タイトル</div>
-								<div class="bl_card_price">￥ 1,000円 (税込み)</div>
+				<div class="bl_npSuggestItemList">
+					<div class="bl_npSuggestItemList_header"><span class="el_bold">レコメンドアイテム</span></div>
+					<div class="bl_npSuggestItemList_body">
+						<a href="#" class="bl_npSuggestItemList_item bl_npSuggestCard">
+							<div class="bl_npSuggestCard_imgWrapper"><img src="./sample_1.jpg" alt="photo"></div>
+							<div class="bl_npSuggestCard_body">
+								<div class="bl_npSuggestCard_ttl">タイトル</div>
+								<div class="bl_npSuggestCard_price">￥ 1,000円 (税込み)</div>
 							</div>
 						</a>
-						<a href="#" class="bl_npSuggestItem_item bl_card">
-							<div class="bl_card_imgWrapper"><img src="./portrait.jpg" alt="photo"></div>
-							<div class="bl_card_body">
-								<div class="bl_card_ttl">タイトルタイトルタイトルタイトル</div>
-								<div class="bl_card_price">￥ 1,000円 (税込み)</div>
+						<a href="#" class="bl_npSuggestItemList_item bl_npSuggestCard">
+							<div class="bl_npSuggestCard_imgWrapper"><img src="./portrait.jpg" alt="photo"></div>
+							<div class="bl_npSuggestCard_body">
+								<div class="bl_npSuggestCard_ttl">タイトルタイトルタイトルタイトル</div>
+								<div class="bl_npSuggestCard_price">￥ 1,000円 (税込み)</div>
 							</div>
 						</a>
-						<a href="#" class="bl_npSuggestItem_item bl_card">
-							<div class="bl_card_imgWrapper"><img src="./landscape.jpg" alt="photo"></div>
-							<div class="bl_card_body">
-								<div class="bl_card_ttl">タイトルタイトルタイトルタイトル</div>
-								<div class="bl_card_price">￥ 1,000円 (税込み)</div>
+						<a href="#" class="bl_npSuggestItemList_item bl_npSuggestCard">
+							<div class="bl_npSuggestCard_imgWrapper"><img src="./landscape.jpg" alt="photo"></div>
+							<div class="bl_npSuggestCard_body">
+								<div class="bl_npSuggestCard_ttl">タイトルタイトルタイトルタイトル</div>
+								<div class="bl_npSuggestCard_price">￥ 1,000円 (税込み)</div>
 							</div>
 						</a>
-						<a href="#" class="bl_npSuggestItem_item bl_card">
-							<div class="bl_card_imgWrapper"><img src="./sample_1.jpg" alt="photo"></div>
-							<div class="bl_card_body">
-								<div class="bl_card_ttl">長ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーいタイトル</div>
-								<div class="bl_card_price">￥ 1,000円 (税込み)</div>
+						<a href="#" class="bl_npSuggestItemList_item bl_npSuggestCard">
+							<div class="bl_npSuggestCard_imgWrapper"><img src="./sample_1.jpg" alt="photo"></div>
+							<div class="bl_npSuggestCard_body">
+								<div class="bl_npSuggestCard_ttl">長ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーいタイトル</div>
+								<div class="bl_npSuggestCard_price">￥ 1,000円 (税込み)</div>
 							</div>
 						</a>
-						<a href="#" class="bl_npSuggestItem_item bl_card">
-							<div class="bl_card_imgWrapper"><img src="./sample_1.jpg" alt="photo"></div>
-							<div class="bl_card_body">
-								<div class="bl_card_ttl">長ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーいタイトル</div>
-								<div class="bl_card_price">￥ 1,000円 (税込み)</div>
+						<a href="#" class="bl_npSuggestItemList_item bl_npSuggestCard">
+							<div class="bl_npSuggestCard_imgWrapper"><img src="./sample_1.jpg" alt="photo"></div>
+							<div class="bl_npSuggestCard_body">
+								<div class="bl_npSuggestCard_ttl">長ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーいタイトル</div>
+								<div class="bl_npSuggestCard_price">￥ 1,000円 (税込み)</div>
 							</div>
 						</a>
-						<a href="#" class="bl_npSuggestItem_item bl_card">
-							<div class="bl_card_imgWrapper"><img src="./sample_1.jpg" alt="photo"></div>
-							<div class="bl_card_body">
-								<div class="bl_card_ttl">長ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーいタイトル</div>
-								<div class="bl_card_price">￥ 1,000円 (税込み)</div>
+						<a href="#" class="bl_npSuggestItemList_item bl_npSuggestCard">
+							<div class="bl_npSuggestCard_imgWrapper"><img src="./sample_1.jpg" alt="photo"></div>
+							<div class="bl_npSuggestCard_body">
+								<div class="bl_npSuggestCard_ttl">長ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーいタイトル</div>
+								<div class="bl_npSuggestCard_price">￥ 1,000円 (税込み)</div>
 							</div>
 						</a>
 					</div>
@@ -326,24 +332,26 @@
 		</div>
 		<!-- /サジェストの商品詳細部分 -->
 	</div>
+	</div>
+	<!-- /2個目のサジェスト要素 -->
 	<div style="width: 350px">
 		<!-- アイテム(メディア) -->
-		<div class="bl_media">
-			<div class="bl_media_imgWrapper"><img src="./sample_1.jpg" alt="photo"></div>
-			<div class="bl_media_body">
-				<div class="bl_media_ttl">長ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーいタイトル</div>
-				<div class="bl_media_price">￥ 1,000円 (税込み)</div>
+		<div class="bl_npSuggestMedia">
+			<div class="bl_npSuggestMedia_imgWrapper"><img src="./sample_1.jpg" alt="photo"></div>
+			<div class="bl_npSuggestMedia_body">
+				<div class="bl_npSuggestMedia_ttl">長ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーいタイトル</div>
+				<div class="bl_npSuggestMedia_price">￥ 1,000円 (税込み)</div>
 			</div>
 		</div>
 		<!-- /アイテム(メディア) -->
 	</div>
 	<div style="width: 150px">
 		<!-- アイテム(カード) -->
-		<div class="bl_card">
-			<div class="bl_card_imgWrapper"><img src="./sample_1.jpg" alt="photo"></div>
-			<div class="bl_card_body">
-				<div class="bl_card_ttl">長ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーいタイトル</div>
-				<div class="bl_card_price">￥ 1,000円 (税込み)</div>
+		<div class="bl_npSuggestCard">
+			<div class="bl_npSuggestCard_imgWrapper"><img src="./sample_1.jpg" alt="photo"></div>
+			<div class="bl_npSuggestCard_body">
+				<div class="bl_npSuggestCard_ttl">長ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーいタイトル</div>
+				<div class="bl_npSuggestCard_price">￥ 1,000円 (税込み)</div>
 			</div>
 		</div>
 		<!-- /アイテム(カード) -->
