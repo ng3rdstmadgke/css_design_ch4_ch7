@@ -5,17 +5,29 @@ body {
 }
 
 /* === === === リセットスタイル === === === */
+.bl_npSuggestContainer,
 .bl_npSuggestContainer * {
 	word-break: break-all; /* 文字の改行に関する禁則処理を解除してどこでも開業できるようにする */
 	word-wrap: break-word; /* 必要に応じて単語の途中で改行 */
 	-ms-overflow-style: none; /* IE でスクロールバーを表示しない */
+	margin: 0;
+	padding: 0;
+	border:0;
+	outline:0;
+	line-height: 1;
+	font-size: 14px;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	vertical-align:baseline;
+	background:transparent;
+	font-weight:inherit;
 }
+
 .bl_npSuggestContainer *::-webkit-scrollbar{
 	width: 0;
 	height: 0;
  }
 .bl_npSuggestContainer a {
-	font-size: 14px;
 	color: #545454;
 	text-decoration: none;
 }
@@ -32,12 +44,8 @@ body {
 	flex-direction: row; /* 商品詳細を下にしたい場合は column, 左にしたい場合は row-reverse */
 	align-items: flex-start;
 	width: 700px;
-	font-size: 14px;
 	/* width: 1400px; font-size: 30px; 検証用 */
 	color: #545454;
-	line-height: 1;
-	font-family: sans-serif;
-	box-sizing: border-box;
 	margin-top: 1px;
 }
 .bl_npSuggestContainer_searchboxComponent {
