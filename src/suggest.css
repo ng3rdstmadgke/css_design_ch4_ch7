@@ -27,16 +27,13 @@ body {
 .bl_npSuggestContainer {
 	position: absolute;
 	z-index: 1000;
-	top: 33px;
+	top: 33px; /* テキストボックスの高さに合わせる */
 	display: flex;
 	flex-direction: row; /* 商品詳細を下にしたい場合は column, 左にしたい場合は row-reverse */
 	align-items: flex-start;
 	width: 700px;
 	font-size: 14px;
-	/*
-	width: 1400px;
-	font-size: 30px;
-	*/
+	/* width: 1400px; font-size: 30px; 検証用 */
 	color: #545454;
 	line-height: 1;
 	font-family: sans-serif;
