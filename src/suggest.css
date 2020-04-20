@@ -24,8 +24,12 @@ body {
 
 /* --- --- --- コンテナ --- --- --- */
 .bl_npSuggestContainer {
+	/* position: absolute; */
+	z-index: 1000;
+	top: 33px;
 	display: flex;
 	flex-direction: row; /* 商品詳細を下にしたい場合は column, 左にしたい場合は row-reverse */
+	align-items: flex-start;
 	width: 700px;
 	font-size: 14px;
 	/*
@@ -38,26 +42,26 @@ body {
 	box-sizing: border-box;
 	margin-top: 1px;
 }
-.bl_npSuggestContainer_keyword {
-	width: 50%;
+.bl_npSuggestContainer_searchboxComponent {
+	max-width: 50%;
 	margin: 0 1px;
 }
 
-.bl_npSuggestContainer_item {
-	width: 50%;
+.bl_npSuggestContainer_eventComponent {
+	max-width: 50%;
 }
 
 @media screen and (max-width: 768px) {
 	.bl_npSuggestContainer {
 		flex-direction: column;
-		width: 100%; /* 本当は 100vw */
+		max-width: 100%; /* 本当は 100vw */
 	}
-	.bl_npSuggestContainer_keyword {
-		width: 100%;
+	.bl_npSuggestContainer_searchboxComponent {
+		max-width: 100%;
 		margin: 0;
 	}
-	.bl_npSuggestContainer_item {
-		width: 100%;
+	.bl_npSuggestContainer_eventComponent {
+		max-width: 100%;
 	}
 }
 
