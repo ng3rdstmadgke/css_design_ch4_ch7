@@ -95,10 +95,9 @@ body {
 }
 .bl_npSuggestKeywordList_item {
 	display: flex;
-	align-items: center;
+	align-items: stretch;
 	justify-content: space-between;
 	border-bottom: 1px solid #d4d9dc;
-	padding: .4em;
 	cursor: pointer;
 }
 .bl_npSuggestKeywordList_item:last-child {
@@ -108,18 +107,25 @@ body {
 .bl_npSuggestKeywordList_item:hover {
 	background-color: #f5f5f5;
 }
+.bl_npSuggestKeywordList_item > *:first-child {
+	margin-left: .5em;
+}
 .bl_npSuggestKeywordList_label {
-	display: block;
+	display: flex;
+	align-items: center;
 	flex-grow: 0;
 	flex-shrink: 0;
+	padding: .4em 0;
 	margin-right: .5em;
 }
 .bl_npSuggestKeywordList_keyword {
-	display: block;
+	display: flex;
+	align-items: center;
 	flex-grow: 1;
 	white-space: nowrap;
 	overflow-x: auto;
-	margin-right: 1em;
+	padding: .4em 0;
+	margin-right: .5em;
 }
 
 @media screen and (max-width: 768px) {
@@ -136,7 +142,6 @@ body {
 		padding: .5em;
 	}
 	.bl_npSuggestKeywordList_item {
-		padding: .4em;
 		border-radius: .25em;
 		margin-right: .5em;
 		border: 1px solid transparent;
@@ -154,6 +159,7 @@ body {
 		display: none;
 	}
 	.bl_npSuggestKeywordList_keyword {
+		padding: .4em;
 		margin: 0;
 	}
 	.bl_npSuggestKeywordList_body::-webkit-scrollbar{
@@ -191,31 +197,37 @@ body {
 }
 .bl_npSuggestHistoryList_item {
 	display: flex;
-	align-items: center;
+	align-items: stretch;
 	justify-content: space-between;
 	border-bottom: 1px solid #d4d9dc;
-	padding: .4em;
 	cursor: pointer;
 }
 .bl_npSuggestHistoryList_item:last-child {
 	border-bottom: 0;
+}
+.bl_npSuggestHistoryList_item > *:first-child {
+	margin-left: .5em;
 }
 .bl_npSuggestHistoryList_item:focus,
 .bl_npSuggestHistoryList_item:hover {
 	background-color: #f5f5f5;
 }
 .bl_npSuggestHistoryList_label {
-	display: block;
+	display: flex;
+	align-items: center;
 	flex-grow: 0;
 	flex-shrink: 0;
+	padding: .4em 0;
 	margin-right: .5em;
 }
 .bl_npSuggestHistoryList_keyword {
-	display: block;
+	display: flex;
+	align-items: center;
 	flex-grow: 1;
 	white-space: nowrap;
 	overflow-x: auto;
-	margin-right: 1em;
+	padding: .4em 0;
+	margin-right: .5em;
 }
 
 @media screen and (max-width: 768px) {
@@ -246,32 +258,38 @@ body {
 }
 .bl_npSuggestRankingList_item {
 	display: flex;
-	align-items: center;
+	align-items: stretch;
 	justify-content: space-between;
 	border-bottom: 1px solid #d4d9dc;
-	padding: .4em;
 	cursor: pointer;
 	counter-increment: bl_npSuggestRankingList; /* カウンタをインクリメント */
 }
 .bl_npSuggestRankingList_item:last-child {
 	border-bottom: 0;
 }
+.bl_npSuggestRankingList_item > *:first-child {
+	margin-left: .5em;
+}
 .bl_npSuggestRankingList_item:focus,
 .bl_npSuggestRankingList_item:hover {
 	background-color: #f5f5f5;
 }
 .bl_npSuggestRankingList_label {
-	display: block;
+	display: flex;
+	align-items: center;
 	flex-grow: 0;
 	flex-shrink: 0;
+	padding: .4em 0;
 	margin-right: .5em;
 }
 .bl_npSuggestRankingList_keyword {
+	display: flex;
+	align-items: center;
 	flex-grow: 1;
-	display: block;
 	white-space: nowrap;
 	overflow-x: auto;
-	margin-right: 1em;
+	padding: .4em 0;
+	margin-right: .5em;
 }
 .bl_npSuggestRankingList_icon {
 	font-weight: bold;
