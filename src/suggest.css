@@ -592,6 +592,18 @@ body {
 	font-size: .75em;
 }
 
+.el_npSuggestCategoryLabel__title::after {
+	content: '商品名';
+}
+
+.el_npSuggestCategoryLabel__path::after {
+	content: 'カテゴリ';
+}
+
+.el_npSuggestCategoryLabel__narrow1::after {
+	content: 'メーカー';
+}
+
 /* --- --- --- 削除ボタン --- --- --- */
 .el_npSuggestCrossBtn {
 	position: relative;
