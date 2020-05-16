@@ -42,12 +42,11 @@ body {
 .bl_npSuggestContainer {
 	position: absolute;
 	z-index: 1000;
-	top: 33px; /* テキストボックスの高さに合わせる */
+	top: 0; /* テキストボックスの高さに合わせる */
 	display: flex;
 	flex-direction: row; /* 商品詳細を下にしたい場合は column, 左にしたい場合は row-reverse */
 	align-items: flex-start;
-	width: 700px;
-	/* width: 1400px; font-size: 30px; 検証用 */
+	width: 600px;
 	margin-top: 1px;
 }
 .bl_npSuggestContainer_searchboxComponent {
@@ -64,7 +63,7 @@ body {
 @media screen and (max-width: 768px) {
 	.bl_npSuggestContainer {
 		flex-direction: column;
-		width: 100%; /* 本当は 100vw */
+		width: 100%;
 	}
 	.bl_npSuggestContainer_searchboxComponent {
 		width: 100%;
@@ -107,6 +106,9 @@ body {
 .bl_npSuggestKeywordList_item:hover {
 	background-color: #f5f5f5;
 }
+.bl_npSuggestKeywordList_item > * {
+	margin-right: .5em;
+}
 .bl_npSuggestKeywordList_item > *:first-child {
 	margin-left: .5em;
 }
@@ -116,7 +118,6 @@ body {
 	flex-grow: 0;
 	flex-shrink: 0;
 	padding: .4em 0;
-	margin-right: .5em;
 }
 .bl_npSuggestKeywordList_keyword {
 	display: flex;
@@ -125,7 +126,6 @@ body {
 	white-space: nowrap;
 	overflow-x: auto;
 	padding: .4em 0;
-	margin-right: .5em;
 }
 
 @media screen and (max-width: 768px) {
@@ -159,6 +159,7 @@ body {
 		box-shadow: none;
 	}
 	.bl_npSuggestKeywordList_item {
+		flex-shrink: 0;
 		border-radius: .25em;
 		margin-right: .5em;
 		border: 1px solid #d4d9dc;
@@ -174,12 +175,8 @@ body {
 		border-color: #009fcc;
 		background-color: #009fcc;
 	}
-	.bl_npSuggestKeywordList_label {
+	.bl_npSuggestKeywordList_item .el_npSuggestAnnotationLabel {
 		display: none;
-	}
-	.bl_npSuggestKeywordList_keyword {
-		padding: .4em;
-		margin: 0;
 	}
 }
 
@@ -211,12 +208,15 @@ body {
 .bl_npSuggestHistoryList_item:last-child {
 	border-bottom: 0;
 }
-.bl_npSuggestHistoryList_item > *:first-child {
-	margin-left: .5em;
-}
 .bl_npSuggestHistoryList_item:focus,
 .bl_npSuggestHistoryList_item:hover {
 	background-color: #f5f5f5;
+}
+.bl_npSuggestHistoryList_item > * {
+	margin-right: .5em;
+}
+.bl_npSuggestHistoryList_item > *:first-child {
+	margin-left: .5em;
 }
 .bl_npSuggestHistoryList_label {
 	display: flex;
@@ -224,7 +224,6 @@ body {
 	flex-grow: 0;
 	flex-shrink: 0;
 	padding: .4em 0;
-	margin-right: .5em;
 }
 .bl_npSuggestHistoryList_keyword {
 	display: flex;
@@ -233,7 +232,6 @@ body {
 	white-space: nowrap;
 	overflow-x: auto;
 	padding: .4em 0;
-	margin-right: .5em;
 }
 
 @media screen and (max-width: 768px) {
@@ -267,6 +265,7 @@ body {
 		box-shadow: none;
 	}
 	.bl_npSuggestHistoryList_item {
+		flex-shrink: 0;
 		border-radius: .25em;
 		margin-right: .5em;
 		border: 1px solid #d4d9dc;
@@ -282,9 +281,11 @@ body {
 		border-color: #009fcc;
 		background-color: #009fcc;
 	}
+	.bl_npSuggestHistoryList_item .el_npSuggestAnnotationLabel {
+		display: none;
+	}
 	.bl_npSuggestHistoryList_keyword {
 		padding: .4em;
-		margin: 0;
 	}
 }
 
@@ -319,6 +320,9 @@ body {
 .bl_npSuggestRankingList_item:last-child {
 	border-bottom: 0;
 }
+.bl_npSuggestRankingList_item > * {
+	margin-right: .5em;
+}
 .bl_npSuggestRankingList_item > *:first-child {
 	margin-left: .5em;
 }
@@ -332,7 +336,6 @@ body {
 	flex-grow: 0;
 	flex-shrink: 0;
 	padding: .4em 0;
-	margin-right: .5em;
 }
 .bl_npSuggestRankingList_keyword {
 	display: flex;
@@ -341,7 +344,6 @@ body {
 	white-space: nowrap;
 	overflow-x: auto;
 	padding: .4em 0;
-	margin-right: .5em;
 }
 .bl_npSuggestRankingList_icon {
 	font-weight: bold;
@@ -382,6 +384,7 @@ body {
 		box-shadow: none;
 	}
 	.bl_npSuggestRankingList_item {
+		flex-shrink: 0;
 		border-radius: .25em;
 		margin-right: .5em;
 		border: 1px solid #d4d9dc;
@@ -399,7 +402,6 @@ body {
 	}
 	.bl_npSuggestRankingList_keyword {
 		padding: .4em;
-		margin: 0;
 	}
 }
 
@@ -576,14 +578,14 @@ body {
 	font-weight: bold;
 }
 
-/* -- --- --- hitnum --- --- --- */
+/* -- --- --- hitnumラベル --- --- --- */
 .el_npSuggestHitnumLabel {
 	font-size: .75em;
 	color: #666;
 }
 
-/* --- --- --- ラベル --- --- --- */
-.el_npSuggestCategoryLabel {
+/* --- --- --- カテゴリラベル --- --- --- */
+.el_npSuggestColumnLabel {
 	display: inline-block;
 	padding: .3em .7em;
 	background-color: #d4d9dc;
@@ -591,17 +593,38 @@ body {
 	color: #666;
 	font-size: .75em;
 }
+.el_npSuggestColumnLabel__::after { content: 'キーワード'; }
+.el_npSuggestColumnLabel__query::after { content: '自動学習'; }
+.el_npSuggestColumnLabel__word::after { content: '抽出キーワード'; }
+.el_npSuggestColumnLabel__title::after { content: '商品名'; }
+.el_npSuggestColumnLabel__path::after { content: 'カテゴリ'; }
+.el_npSuggestColumnLabel__narrow1::after { content: 'narrow1'; }
+.el_npSuggestColumnLabel__narrow2::after { content: 'narrow2'; }
+.el_npSuggestColumnLabel__narrow3::after { content: 'narrow3'; }
+.el_npSuggestColumnLabel__narrow4::after { content: 'narrow4'; }
+.el_npSuggestColumnLabel__narrow5::after { content: 'narrow5'; }
+.el_npSuggestColumnLabel__narrow6::after { content: 'narrow6'; }
+.el_npSuggestColumnLabel__narrow7::after { content: 'narrow7'; }
+.el_npSuggestColumnLabel__narrow8::after { content: 'narrow8'; }
+.el_npSuggestColumnLabel__narrow9::after { content: 'narrow9'; }
+.el_npSuggestColumnLabel__narrow10::after { content: 'narrow10'; }
+.el_npSuggestColumnLabel__keyword1::after { content: 'keyword1'; }
+.el_npSuggestColumnLabel__keyword2::after { content: 'keyword2'; }
+.el_npSuggestColumnLabel__keyword3::after { content: 'keyword3'; }
+.el_npSuggestColumnLabel__keyword4::after { content: 'keyword4'; }
+.el_npSuggestColumnLabel__keyword5::after { content: 'keyword5'; }
+.el_npSuggestColumnLabel__keyword6::after { content: 'keyword6'; }
+.el_npSuggestColumnLabel__keyword7::after { content: 'keyword7'; }
+.el_npSuggestColumnLabel__keyword8::after { content: 'keyword8'; }
+.el_npSuggestColumnLabel__keyword9::after { content: 'keyword9'; }
+.el_npSuggestColumnLabel__keyword10::after { content: 'keyword10'; }
 
-.el_npSuggestCategoryLabel__title::after {
-	content: '商品名';
-}
-
-.el_npSuggestCategoryLabel__path::after {
-	content: 'カテゴリ';
-}
-
-.el_npSuggestCategoryLabel__narrow1::after {
-	content: 'メーカー';
+/* -- --- --- 注釈ラベル --- --- --- */
+.el_npSuggestAnnotationLabel {
+	display: inline-block;
+	padding: 0 .7em;
+	color: #009fcc;
+	font-size: .75em;
 }
 
 /* --- --- --- 削除ボタン --- --- --- */
